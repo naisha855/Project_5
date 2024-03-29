@@ -1,0 +1,36 @@
+주요 사용 
+
+- React
+- React-redux(리덕스)
+- React Router(라우터)
+- 반응형
+
+주제
+
+
+내용 참고
+
+https://www.sideshow.com/brands/star-wars/type/all-figures
+
+(자료 소실될 경우 검색해보기: Star wars figure us)
+
+
+템플릿 참고
+
+https://preview.themeforest.net/item/ecolife-multipurpose-ecommerce-html-template/full_screen_preview/27418907?_ga=2.234899529.914488396.1658728789-1128965468.1658728789&_gac=1.208849446.1658730697.EAIaIQobChMIi8nuq7WT-QIV1GSLCh2JqArxEAMYAyAAEgKPbvD_BwE
+
+
+
+
+
+
+프로젝트 참고
+https://blog.naver.com/red0808/223021563554?trackingCode=blog_bloghome_searchlist
+
+괜찮다고 생각한 참고
+
+https://minkyung05.github.io/project4_react_jordan/
+
+https://subin114.github.io/
+
+https://lej99.github.io/project_5/
