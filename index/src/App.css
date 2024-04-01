@@ -1,0 +1,10 @@
+.App {
+  text-align: center;
+}
+
+.slider{
+  height: 500px;
+  background-image:url(../public/img/slider1.jpg);
+  background-size: cover;
+  background-position: center;
+}
