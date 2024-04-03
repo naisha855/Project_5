@@ -1,10 +1,52 @@
+@import url('https://fonts.cdnfonts.com/css/star-wars');
+/* font-family: 'Star Wars', sans-serif; */
+
+h1{
+  font-family: 'Star Wars', sans-serif;
+  color: white;
+}
+
+h4{
+  font-family: 'Star Wars', sans-serif;
+  font-size: 20px;
+}
+
 .App {
   text-align: center;
 }
 
-.slider{
-  height: 500px;
-  background-image:url(../public/img/slider1.jpg);
+/* Slider */
+
+.slider1, .slider2, .slider3{
+  height: 890px;
   background-size: cover;
   background-position: center;
+
+}
+.slider1{
+  background-image:url(../public/img/slider1.jpg);
+}
+.slider2{
+  background-image:url(../public/img/slider2.jpg);
+}
+.slider3{
+  background-image:url(../public/img/slider3.jpg);
+}
+
+/* Section1 */
+
+.col-lg-3, .col-lg-6{
+  padding: 10px;
+}
+
+.col-lg-3 img, .col-lg-6 img{ width: 100%}
+
+@media screen and (max-width: 991px ){
+  .col-lg-3{
+    width: 50%;
+    padding: 10px;
+  }
+  .col-lg-6{
+    order: 2
+  }
 }

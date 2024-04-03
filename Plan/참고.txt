@@ -27,6 +27,16 @@ https://preview.themeforest.net/item/ecolife-multipurpose-ecommerce-html-templat
 프로젝트 참고
 https://blog.naver.com/red0808/223021563554?trackingCode=blog_bloghome_searchlist
 
+- Carousels
+https://react-bootstrap.netlify.app/docs/components/carousel
+
+-swiper
+
+https://swiperjs.com/demos#grid
+https://codesandbox.io/p/devbox/swiper-react-navigation-2k3jk3?file=%2Fsrc%2Fstyles.css%3A21%2C16
+https://codesandbox.io/p/devbox/swiper-react-grid-kjxxnp?file=%2Fsrc%2FApp.jsx%3A1%2C15-1%2C35
+
+
 괜찮다고 생각한 참고
 
 https://minkyung05.github.io/project4_react_jordan/
