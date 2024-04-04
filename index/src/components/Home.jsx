@@ -1,14 +1,13 @@
 import React from 'react';
 import Product from './Product'
-import {
-    Carousel, Container, Row, Col,
-} from 'react-bootstrap';
-
-
+import { Carousel, Container, Row, Col } from 'react-bootstrap';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Grid, Navigation } from 'swiper/modules';
+import Bestfigure from './Bestfigure';
 
 
 const Home = (props) => {
-    let { character } = props;
+    let { character, product } = props;
     return (
 
         <>
@@ -41,9 +40,9 @@ const Home = (props) => {
             <Container>
                 {/* section1 */}
                 <Row>
-                    <Col lg={3}><img src="https://htmldemo.net/ecolife/ecolife/assets/images/banner-image/1.jpg" /></Col>
-                    <Col lg={6}><img src="https://htmldemo.net/ecolife/ecolife/assets/images/banner-image/2.jpg" /></Col>
-                    <Col lg={3}><img src="https://htmldemo.net/ecolife/ecolife/assets/images/banner-image/3.jpg" /></Col>
+                    <Col lg={3}><img src="/img/section1_1.jpg" /></Col>
+                    <Col lg={6}><img src="/img/section1_2.jpg" /></Col>
+                    <Col lg={3}><img src="/img/section1_3.jpg" /></Col>
                 </Row>
 
                 {/* section2 */}
@@ -53,10 +52,86 @@ const Home = (props) => {
                             <Product character={character} key={i} />)
                     }
                 </Row>
-  
-                {/* section4 */}
+
 
             </Container>
+
+
+            {/* section3 */}
+            <div className='section3'>
+                <Container>
+                    <Row style={{height: 500}}>
+                        <Col md={5} xl={4} style={{height: '100%'}}>
+                            <Swiper
+                                slidesPerView={2}
+                                spaceBetween={20}
+                                navigation={true}
+                                // grid={{
+                                //     rows: 1,
+                                // }}
+                                breakpoints={{
+                                    768: {
+                                        slidesPerView: 1,
+                                        spaceBetween: 0,
+                                    }
+                                }}
+                                modules={[Grid,Navigation]}
+                                className="leftmySwiper">
+                             
+                                {
+                                    product.map((product, i) =>
+                                        <SwiperSlide style={{height: '500px'}}>
+                                            <Bestfigure product={product} key={i} />
+                                        </SwiperSlide>)
+                                }
+
+
+                            </Swiper>
+                        </Col>
+                        <Col md={7} xl={8} style={{height: '100%'}}>
+                            <Swiper
+                                slidesPerView={2}
+                                grid={{
+                                    rows: 2,
+                                }}
+                                spaceBetween={20}
+                                navigation={true}
+                                breakpoints={{
+                                    768: {
+                                        slidesPerView: 3,
+                                        spaceBetween: 20,
+                                    },
+                                    1200: {
+                                        slidesPerView: 4,
+                                        spaceBetween: 20,
+                                    },
+                                }}
+                                modules={[Grid, Navigation]}
+                                className="rightmySwiper"
+                            >
+                                {
+                                    product.map((product, i) =>
+                                    <SwiperSlide>
+                                <Bestfigure product={product} key={i} />
+                                </SwiperSlide>)}
+                            </Swiper>
+                        </Col>
+
+                    </Row>
+                </Container>
+            </div>
+
+            {/* <Container>
+                <Row>
+                    {
+                        product.map((product, i) =>
+                            <Bestfigure product={product}
+                                key={i} />)
+                    }
+                </Row>
+            </Container> */}
+            {/* section4 */}
+
         </>
     )
 }

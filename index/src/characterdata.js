@@ -4,7 +4,6 @@ let data = [
         title: "Darth Vader",
         imgUrl: "../public/img/Darth_Vader.png",
         content: "Galactic Empire, 2nd"
-
     },
 
     {
@@ -39,8 +38,14 @@ let data = [
         title: "Darth Sidious",
         imgUrl: "",
         content: "Galactic Empire, Emperor"
+    },
+    {
+        id: 6,
+        title: "Darth Sidious",
+        imgUrl: "",
+        content: "Galactic Empire, Emperor"
     }
     
 ]
 
-export default data;
+export default data
