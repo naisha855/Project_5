@@ -5,7 +5,10 @@ const Bestfigure = (props) => {
 
     return (
         <div style={{ display: 'flex', flexDirection: 'column' }}>
-            <img src={imgUrl} alt="item" className='section3_img'/>
+            <div width={'120px'} height={'120px'}>
+                <img src={imgUrl} alt="item" className='section3_img'
+                />
+            </div>
             <a href="">{title}</a>
             <h5>{size}</h5>
             <p>{price}</p>

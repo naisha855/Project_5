@@ -1,13 +1,17 @@
 import React from 'react';
 import Product from './Product'
-import { Carousel, Container, Row, Col } from 'react-bootstrap';
+import { Carousel, Container, Row, Col, Pagination, Image } from 'react-bootstrap';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Grid, Navigation } from 'swiper/modules';
 import Bestfigure from './Bestfigure';
+import Userreview from './Userreview';
+import Comingsoon from './Comingsoon';
+import Partners from './Partners';
+import Userblog from './Userblog';
 
 
 const Home = (props) => {
-    let { character, product } = props;
+    let { character, product, review, comingsoon, userblog, partners } = props;
     return (
 
         <>
@@ -39,7 +43,7 @@ const Home = (props) => {
 
             <Container>
                 {/* section1 */}
-                <Row>
+                <Row className='section1'>
                     <Col lg={3}><img src="/img/section1_1.jpg" /></Col>
                     <Col lg={6}><img src="/img/section1_2.jpg" /></Col>
                     <Col lg={3}><img src="/img/section1_3.jpg" /></Col>
@@ -60,8 +64,8 @@ const Home = (props) => {
             {/* section3 */}
             <div className='section3'>
                 <Container>
-                    <Row style={{height: 500}}>
-                        <Col md={5} xl={4} style={{height: '100%'}}>
+                    <Row style={{ height: 500 }}>
+                        <Col className='left' md={5} xl={4}>
                             <Swiper
                                 slidesPerView={2}
                                 spaceBetween={20}
@@ -75,12 +79,12 @@ const Home = (props) => {
                                         spaceBetween: 0,
                                     }
                                 }}
-                                modules={[Grid,Navigation]}
+                                modules={[Grid, Navigation]}
                                 className="leftmySwiper">
-                             
+
                                 {
                                     product.map((product, i) =>
-                                        <SwiperSlide style={{height: '500px'}}>
+                                        <SwiperSlide>
                                             <Bestfigure product={product} key={i} />
                                         </SwiperSlide>)
                                 }
@@ -88,7 +92,7 @@ const Home = (props) => {
 
                             </Swiper>
                         </Col>
-                        <Col md={7} xl={8} style={{height: '100%'}}>
+                        <Col className='right' md={7} xl={8} style={{ height: '100%' }}>
                             <Swiper
                                 slidesPerView={2}
                                 grid={{
@@ -111,9 +115,9 @@ const Home = (props) => {
                             >
                                 {
                                     product.map((product, i) =>
-                                    <SwiperSlide>
-                                <Bestfigure product={product} key={i} />
-                                </SwiperSlide>)}
+                                        <SwiperSlide>
+                                            <Bestfigure product={product} key={i} />
+                                        </SwiperSlide>)}
                             </Swiper>
                         </Col>
 
@@ -121,17 +125,116 @@ const Home = (props) => {
                 </Container>
             </div>
 
-            {/* <Container>
-                <Row>
-                    {
-                        product.map((product, i) =>
-                            <Bestfigure product={product}
-                                key={i} />)
-                    }
-                </Row>
-            </Container> */}
-            {/* section4 */}
+            {/* Section4 */}
 
+            <div className="section4">
+
+                <Swiper
+                    slidesPerView={2}
+                    // centeredSlides={true}
+                    spaceBetween={30}
+                    grabCursor={true}
+                    pagination={{
+                        clickable: true,
+                    }}
+                    modules={Pagination}
+                    className="reviewmySwiper"
+                >
+
+                    {
+                        review.map((review, i) =>
+                            <SwiperSlide key={i}>
+                                <Userreview review={review} />
+                            </SwiperSlide>
+                        )
+                    }
+
+                </Swiper>
+            </div>
+
+            {/* Section5 */}
+
+            <Container>
+                <Row>
+                    <Col xs={6} md={4}>
+                        <Image src="holder.js/171x180" rounded />
+                    </Col>
+                    <Col xs={6} md={4}>
+                        <Image src="holder.js/171x180" rounded />
+                    </Col>
+                    <Col xs={6} md={4}>
+                        <Image src="holder.js/171x180" rounded />
+                    </Col>
+                    <Col xs={6} md={4}>
+                        <Image src="holder.js/171x180" rounded />
+                    </Col>
+                </Row>
+            </Container>
+
+            {/* Section6 */}
+
+            <div className='section6'>
+
+                <Swiper
+                    slidesPerView={3}
+                    grid={{
+                        rows: 2,
+                    }}
+                    spaceBetween={30}
+                    pagination={{
+                        clickable: true,
+                    }}
+                    // modules={[Grid, Pagination]}
+                    modules={Pagination}
+                    className="comingsoonmySwiper"
+                >
+                    {
+                        comingsoon.map((comingsoon, i) =>
+                            <SwiperSlide key={i}>
+                                <Comingsoon comingsoon={comingsoon} />
+                            </SwiperSlide>
+                        )
+                    }
+                </Swiper>
+            </div>
+
+            {/* section7 */}
+
+            <Image src="/img/section_7.jpg" fluid />;
+
+            {/* section8 */}
+
+            {/* <Swiper
+                slidesPerView={3}
+                spaceBetween={30}
+                pagination={{
+                    clickable: true,
+                }}
+                modules={[Pagination]}
+                className="userblogmySwiper"
+            >
+                {
+                    userblog.map((userblog, i) =>
+                        <SwiperSlide key={i}>
+                            <Userblog userblog={userblog} />
+                        </SwiperSlide>
+                    )
+
+                }
+            </Swiper> */}
+
+            {/* section9 */}
+            <div className='section9'>
+                <Swiper watchSlidesProgress={true} slidesPerView={3} className="partnersmySwiper">
+                    {
+                        partners.map((partners, i) =>
+                            <SwiperSlide key={i}>
+                                <Partners partners={partners} />
+                            </SwiperSlide>
+                        )
+                    }
+                </Swiper>
+            </div>
         </>
     )
 }

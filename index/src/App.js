@@ -1,16 +1,14 @@
 import {
-  Container, Navbar, Nav, NavDropdown, Form, Button, Offcanvas, Row, Image, Col
+  Container, Navbar, Nav, NavDropdown, Form, Button, Offcanvas, Image
 } from 'react-bootstrap';
-import React, { useRef, useState } from 'react';
+import React, { useState } from 'react';
 import data from './characterdata.js';
 import data2 from './productdata.js';
+import data3 from "./reviewdata.js"
+import data4 from "./comingsoondata.js"
+import data5 from "./userblogdata.js"
+import data6 from "./partnersdata.js"
 import Home from './components/Home';
-import Bestfigure from './components/Bestfigure.jsx';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Grid, Navigation, Pagination } from 'swiper/modules';
-// import Detail from './components/Detail.js';
-
-
 
 // StyleSheet
 
@@ -22,11 +20,13 @@ import 'swiper/css/grid'
 import 'swiper/css/pagination'
 import './styles.css'
 
-
 function App() {
-
   let [character, setChracter] = useState(data);
   let [product, setProduct] = useState(data2);
+  let [review, setReview] = useState(data3);
+  let [comingsoon, setComingsoon] = useState(data4);
+  let [userblog, Setuserblog] = useState(data5);
+  let [partners, setPartners] = useState(data6);
 
   return (
     <div className="App">
@@ -34,7 +34,7 @@ function App() {
         {['md'].map((expand) => (
           <Navbar>
             <Container fluid>
-              <Navbar.Brand href="#">Navbar Offcanvas</Navbar.Brand>
+              <Navbar.Brand href="#"><Image src="/img/logo.png" height={'50px'} /></Navbar.Brand>
               <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${'md'}`} />
               <Navbar.Offcanvas
                 id={`offcanvasNavbar-expand-${expand}`}
@@ -79,108 +79,12 @@ function App() {
           </Navbar>
         ))}
 
-        <Home character={character} product={product}/>
-
-        {/* Section4 */}
-
-        <Swiper
-          slidesPerView={2}
-          centeredSlides={true}
-          spaceBetween={30}
-          grabCursor={true}
-          pagination={{
-            clickable: true,
-          }}
-          modules={[Pagination]}
-          className="mySwiper"
-        >
-          <SwiperSlide>Slide 1</SwiperSlide>
-          <SwiperSlide>Slide 2</SwiperSlide>
-          <SwiperSlide>Slide 3</SwiperSlide>
-          <SwiperSlide>Slide 4</SwiperSlide>
-          <SwiperSlide>Slide 5</SwiperSlide>
-          <SwiperSlide>Slide 6</SwiperSlide>
-          <SwiperSlide>Slide 7</SwiperSlide>
-          <SwiperSlide>Slide 8</SwiperSlide>
-          <SwiperSlide>Slide 9</SwiperSlide>
-        </Swiper> 
-
-
-
-
-
-        {/* Section5 */}
-
-        {/* <Container>
-          <Row>
-            <Col xs={6} md={4}>
-              <Image src="holder.js/171x180" rounded />
-            </Col>
-            <Col xs={6} md={4}>
-              <Image src="holder.js/171x180" rounded />
-            </Col>
-            <Col xs={6} md={4}>
-              <Image src="holder.js/171x180" rounded />
-            </Col>
-            <Col xs={6} md={4}>
-              <Image src="holder.js/171x180" rounded />
-            </Col>
-          </Row>
-        </Container> */}
-
-
-        {/* Section6 */}
-
-        {/* <Swiper
-        slidesPerView={3}
-        grid={{
-          rows: 2,
-        }}
-        spaceBetween={30}
-        pagination={{
-          clickable: true,
-        }}
-        modules={[Grid, Pagination]}
-        className="mySwiper"
-      >
-        <SwiperSlide>Slide 1</SwiperSlide>
-        <SwiperSlide>Slide 2</SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
-        <SwiperSlide>Slide 4</SwiperSlide>
-        <SwiperSlide>Slide 5</SwiperSlide>
-        <SwiperSlide>Slide 6</SwiperSlide>
-        <SwiperSlide>Slide 7</SwiperSlide>
-        <SwiperSlide>Slide 8</SwiperSlide>
-        <SwiperSlide>Slide 9</SwiperSlide>
-      </Swiper> */}
-
-        {/* section7 */}
-
-        <Image src="/img/section_7.jpg" fluid />;
-
-        {/* section8 */}
-
-
-
-        {/* section9 */}
-        <h3>
-          Slider5 is visible when you slide to 2,3, or 4, and slider5 has
-          "swiper-slide-visible" className
-        </h3>{" "}
-        <br />
-        <Swiper watchSlidesProgress={true} slidesPerView={3} className="mySwiper">
-          <SwiperSlide>Slide 1</SwiperSlide>
-          <SwiperSlide>Slide 2</SwiperSlide>
-          <SwiperSlide>Slide 3</SwiperSlide>
-          <SwiperSlide>Slide 4</SwiperSlide>
-          <SwiperSlide>Slide 5</SwiperSlide>
-          <SwiperSlide>Slide 6</SwiperSlide>
-          <SwiperSlide>Slide 7</SwiperSlide>
-          <SwiperSlide>Slide 8</SwiperSlide>
-          <SwiperSlide>Slide 9</SwiperSlide>
-        </Swiper>
+        <Home character={character} product={product} review={review} comingsoon={comingsoon} userblog={userblog}
+        partners={partners} />
 
         {/* Footer */}
+
+
 
       </>
     </div>

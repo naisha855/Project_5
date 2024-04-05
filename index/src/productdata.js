@@ -27,6 +27,48 @@ let data2 = [
         size: "Sixth Scale Figure Set",
         price: "$500"
     },
+    {
+        id: 4,
+        title: "OBI-WAN KENOBI",
+        imgUrl: "/img/OBI-WAN_KENOBI.png",
+        size: "Sixth Scale Figure Set",
+        price: "$260"
+    },
+    {
+        id: 5,
+        title: "GENERAL GRIEVOUS",
+        imgUrl: "/img/GENERAL_GRIEVOUS.png",
+        size: "Premium Format™ Figure",
+        price: "$905"
+    },
+    {
+        id: 6,
+        title: "SCOUT TROOPER",
+        imgUrl: "/img/SCOUT_TROOPER.png",
+        size: "Sixth Scale Figure",
+        price: "$225"
+    },
+    {
+        id: 7,
+        title: "HAN SOLO",
+        imgUrl: "/img/HAN_SOLO.png",
+        size: "Sixth Scale Figure",
+        price: "$290"
+    },
+    {
+        id: 8,
+        title: "DARTH VADER",
+        imgUrl: "/img/DARTH_VADER2.png",
+        size: "Sixth Scale Figure",
+        price: "$245"
+    },
+    {
+        id: 9,
+        title: "PURGE TROOPER",
+        imgUrl: "/img/PURGE_TROOPER.png",
+        size: "Sixth Scale Figure",
+        price: "$240"
+    }
 ]
 
 export default data2
