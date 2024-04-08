@@ -1,17 +1,17 @@
 import React from 'react';
 import Product from './Product'
-import { Carousel, Container, Row, Col, Pagination, Image } from 'react-bootstrap';
+import { Carousel, Container, Row, Col, Image } from 'react-bootstrap';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Grid, Navigation } from 'swiper/modules';
+import { Grid, Navigation, Pagination } from 'swiper/modules';
+import Shippinginfo from './Shippinginfo'
 import Bestfigure from './Bestfigure';
 import Userreview from './Userreview';
 import Comingsoon from './Comingsoon';
 import Partners from './Partners';
 import Userblog from './Userblog';
 
-
 const Home = (props) => {
-    let { character, product, review, comingsoon, userblog, partners } = props;
+    let { character, product, review, comingsoon, userblog, partners, shippinginfo } = props;
     return (
 
         <>
@@ -39,8 +39,6 @@ const Home = (props) => {
                 </Carousel.Item>
             </Carousel>
 
-
-
             <Container>
                 {/* section1 */}
                 <Row className='section1'>
@@ -50,6 +48,11 @@ const Home = (props) => {
                 </Row>
 
                 {/* section2 */}
+
+                <div className='title'>
+                    <h2>Star Wars Character</h2>
+                    <p>A long time ago in a galaxy far, far away....</p>
+                </div>
                 <Row>
                     {
                         character.map((character, i) =>
@@ -57,11 +60,15 @@ const Home = (props) => {
                     }
                 </Row>
 
-
             </Container>
 
-
             {/* section3 */}
+            <Container>
+                <div className='title'>
+                    <h2>Action Figures</h2>
+                    <p>Are you one with the Force, young Padawan? With our epic range of Star Wars action figures, your local star system will be bursting with legendary favorites. Whether you’re a Rebel at heart or you have a soft spot for the dark side, we've got the droids, Wookiees, and Jedi Masters to boost your shelf’s interstellar style. To explore the galaxy far, far away in greater depth, check out our Star Wars collectibles. Then, if you think your collection can handle more, your next adventure lies within our entire action figures collection. May the Force (of collecting) be with you!</p>
+                </div>
+            </Container>
             <div className='section3'>
                 <Container>
                     <Row style={{ height: 500 }}>
@@ -125,86 +132,92 @@ const Home = (props) => {
                 </Container>
             </div>
 
-            {/* Section4 */}
-
-            <div className="section4">
-
-                <Swiper
-                    slidesPerView={2}
-                    // centeredSlides={true}
-                    spaceBetween={30}
-                    grabCursor={true}
-                    pagination={{
-                        clickable: true,
-                    }}
-                    modules={Pagination}
-                    className="reviewmySwiper"
-                >
-
-                    {
-                        review.map((review, i) =>
-                            <SwiperSlide key={i}>
-                                <Userreview review={review} />
-                            </SwiperSlide>
-                        )
-                    }
-
-                </Swiper>
-            </div>
-
-            {/* Section5 */}
-
             <Container>
-                <Row>
-                    <Col xs={6} md={4}>
-                        <Image src="holder.js/171x180" rounded />
-                    </Col>
-                    <Col xs={6} md={4}>
-                        <Image src="holder.js/171x180" rounded />
-                    </Col>
-                    <Col xs={6} md={4}>
-                        <Image src="holder.js/171x180" rounded />
-                    </Col>
-                    <Col xs={6} md={4}>
-                        <Image src="holder.js/171x180" rounded />
-                    </Col>
-                </Row>
-            </Container>
 
-            {/* Section6 */}
+                {/* Section4 */}
 
-            <div className='section6'>
+                <div className="section4">
 
-                <Swiper
-                    slidesPerView={3}
-                    grid={{
-                        rows: 2,
-                    }}
-                    spaceBetween={30}
-                    pagination={{
-                        clickable: true,
-                    }}
-                    // modules={[Grid, Pagination]}
-                    modules={Pagination}
-                    className="comingsoonmySwiper"
-                >
+                    <div className='title'>
+                        <h2>Review</h2>
+                        <p>Show off your force.</p>
+                    </div>
+
+                    <Swiper
+                        slidesPerView={2}
+                        // centeredSlides={true}
+                        spaceBetween={30}
+                        grabCursor={true}
+                        pagination={{
+                            clickable: true,
+                        }}
+                        modules={Pagination}
+                        className="reviewmySwiper"
+                    >
+                        {
+                            review.map((review, i) =>
+                                <SwiperSlide key={i}>
+                                    <Userreview review={review} />
+                                </SwiperSlide>
+                            )
+                        }
+
+                    </Swiper>
+                </div>
+
+                {/* Section5 */}
+
+                <Row className='section5'>
                     {
-                        comingsoon.map((comingsoon, i) =>
-                            <SwiperSlide key={i}>
-                                <Comingsoon comingsoon={comingsoon} />
-                            </SwiperSlide>
+                        shippinginfo.map((shippinginfo, i) =>
+                            <Shippinginfo shippinginfo={shippinginfo} key={i} />
                         )
                     }
-                </Swiper>
-            </div>
+                </Row>
 
-            {/* section7 */}
+                {/* Section6 */}
 
-            <Image src="/img/section_7.jpg" fluid />;
+                <div className='section6'>
 
-            {/* section8 */}
+                    <div className='title'>
+                        <h2>Comingsoon</h2>
+                        <p>Look forward to it.</p>
+                    </div>
 
-            {/* <Swiper
+                    <Swiper
+                        slidesPerView={3}
+                        grid={{
+                            rows: 2,
+                        }}
+                        spaceBetween={30}
+                        pagination={{
+                            clickable: true,
+                        }}
+                        modules={[Grid, Pagination]}
+                        className="comingsoonmySwiper"
+                    >
+                        {
+                            comingsoon.map((comingsoon, i) =>
+                                <SwiperSlide key={i}>
+                                    <Comingsoon comingsoon={comingsoon} />
+                                </SwiperSlide>
+                            )
+                        }
+                    </Swiper>
+                </div>
+
+                {/* section7 */}
+
+                <Image src="/img/section_7.jpg" width={'100%'} fluid />;
+
+                <div className='title'>
+                    <h2>SiDESHoW Blog</h2>
+                    <p>Welcome to my blog</p>
+                </div>
+
+                {/* section8 */}
+
+                {/* { <Swiper
                 slidesPerView={3}
                 spaceBetween={30}
                 pagination={{
@@ -219,22 +232,22 @@ const Home = (props) => {
                             <Userblog userblog={userblog} />
                         </SwiperSlide>
                     )
-
                 }
-            </Swiper> */}
+            </Swiper> } */}
 
-            {/* section9 */}
-            <div className='section9'>
-                <Swiper watchSlidesProgress={true} slidesPerView={3} className="partnersmySwiper">
-                    {
-                        partners.map((partners, i) =>
-                            <SwiperSlide key={i}>
-                                <Partners partners={partners} />
-                            </SwiperSlide>
-                        )
-                    }
-                </Swiper>
-            </div>
+                {/* section9 */}
+                <div className='section9'>
+                    <Swiper watchSlidesProgress={true} slidesPerView={3} className="partnersmySwiper">
+                        {
+                            partners.map((partners, i) =>
+                                <SwiperSlide key={i}>
+                                    <Partners partners={partners} />
+                                </SwiperSlide>
+                            )
+                        }
+                    </Swiper>
+                </div>
+            </Container>
         </>
     )
 }

@@ -1,6 +1,8 @@
 import React from 'react'
 import { Col } from 'react-bootstrap'
 
+// Section8
+
 const Userblog = (props) => {
     let { title, text, link, imgUrl } = props.character;
     return (

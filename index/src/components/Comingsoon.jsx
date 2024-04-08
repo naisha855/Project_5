@@ -1,14 +1,18 @@
 import React from 'react'
 import { Col } from 'react-bootstrap';
 
+// section6
+
 const Comingsoon = (props) => {
     let { imgUrl, scale, title } = props.comingsoon;
     return (
-        <Col>
+        <div className='comingsoon'>
             <img src={imgUrl} alt="" />
+            <div>
             <h5>{scale}</h5>
             <a href="">{title}</a>
-        </Col>
+            </div>
+        </div>
     )
 }
 

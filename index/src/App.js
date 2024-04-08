@@ -1,14 +1,15 @@
 import {
   Container, Navbar, Nav, NavDropdown, Form, Button, Offcanvas, Image
 } from 'react-bootstrap';
-import React, { useState } from 'react';
-import data from './characterdata.js';
-import data2 from './productdata.js';
+import React, { useState } from 'react'
+import data from './characterdata.js'
+import data2 from './productdata.js'
 import data3 from "./reviewdata.js"
 import data4 from "./comingsoondata.js"
 import data5 from "./userblogdata.js"
 import data6 from "./partnersdata.js"
-import Home from './components/Home';
+import info from "./shippinginfodata.js"
+import Home from './components/Home'
 
 // StyleSheet
 
@@ -21,6 +22,7 @@ import 'swiper/css/pagination'
 import './styles.css'
 
 function App() {
+  let [shippinginfo, setShippinginfo] = useState(info);
   let [character, setChracter] = useState(data);
   let [product, setProduct] = useState(data2);
   let [review, setReview] = useState(data3);
@@ -79,7 +81,7 @@ function App() {
           </Navbar>
         ))}
 
-        <Home character={character} product={product} review={review} comingsoon={comingsoon} userblog={userblog}
+        <Home shippinginfo={shippinginfo} character={character} product={product} review={review} comingsoon={comingsoon} userblog={userblog}
         partners={partners} />
 
         {/* Footer */}

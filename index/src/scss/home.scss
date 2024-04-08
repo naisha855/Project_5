@@ -1,5 +1,11 @@
 @charset "utf-8";
 
+$MainBlack: #000;
+$SubBlack: #5A5C5D;
+$MainWhite: #f4f4f4;
+// #1D1E1F;
+
+
 
 /* Slider */
 
@@ -9,7 +15,6 @@
     height: 900px;
     background-size: cover;
     background-position: center;
-
 }
 
 .slider1 {
@@ -24,8 +29,18 @@
     background-image: url(/../public/img/slider3.jpg);
 }
 
+.title {
+    margin: 60px 0;
+    text-align: left;
+
+    h2 {
+        font-family: 'Star Wars', sans-serif;
+    }
+}
+
 /* Section1 */
 .section1 {
+    margin: 60px 0;
 
     .col-lg-3,
     .col-lg-6 {
@@ -39,6 +54,16 @@
 
 }
 
+// section2
+
+.character {
+    text-align: left;
+
+    img {
+        width: auto;
+        height: 200px;
+    }
+}
 
 /* section3 */
 
@@ -52,6 +77,7 @@
         .left {
             .swiper-slide {
                 height: 500px !important;
+                background-color: $SubBlack;
             }
 
             img {
@@ -61,15 +87,119 @@
 
         .right {
             .swiper-slide {
+                background-color: $SubBlack;
+
                 img {
                     height: 120px;
                     background-position: center;
                     background-size: cover;
+
                 }
             }
         }
     }
 }
+
+.best_figure {
+    text-align: left;
+}
+
+// section4
+
+.section4 {
+    padding: 60px 0 52px 0;
+    background-position: center;
+    background-size: cover;
+    // background-image: url(/index/public/img/section4_wallpaper.jpg);
+}
+
+.userreview {
+    display: flex;
+    flex-direction: row;
+    height: 234px;
+    text-align: left;
+    padding: 30px 57px 30px 40px;
+    background-color: $SubBlack;
+
+    .profileimage{
+        margin-top: 20px;
+        margin-right: 10px;
+    }
+
+    .profileimage {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        border: 5px solid $MainWhite;
+    }
+
+    .textpage {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+background-color: $MainBlack;
+border-radius: 10px;
+padding: 30px;
+        p {
+            font-size: 14px;
+        }
+    }
+}
+
+// Section5
+
+.section5{
+    border: 2px solid $MainWhite;
+    text-align: left;
+}
+
+// Section6
+
+.section6 {
+    height: 650px;
+    background-color: transparent;
+
+
+    .swiper{
+        height: 75%;
+
+        .swiper-pagination-bullet{background-color: $MainWhite;}
+
+    }
+    .comingsoon {
+        height: 200px;
+        border: 1px solid gray;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 10px;
+        text-align: left;
+
+        img {
+            height: 120px;
+            margin-right: 20px;
+        }
+    }
+
+    .comimgsoonmySwiper {
+        height: 950px;
+
+
+    }
+
+    .swiper-slide {
+        background-color: transparent;
+    }
+
+    .swiper-wrapper {
+        height: 450px;
+    }
+}
+
+
+
+// Section9
 
 .section9 {
     .row {
