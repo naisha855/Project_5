@@ -1,7 +1,8 @@
+import React, { useState } from 'react'
 import {
   Container, Navbar, Nav, NavDropdown, Form, Button, Offcanvas, Image
 } from 'react-bootstrap';
-import React, { useState } from 'react'
+import { Routes, Route } from 'react-router-dom'
 import data from './characterdata.js'
 import data2 from './productdata.js'
 import data3 from "./reviewdata.js"
@@ -10,6 +11,9 @@ import data5 from "./userblogdata.js"
 import data6 from "./partnersdata.js"
 import info from "./shippinginfodata.js"
 import Home from './components/Home'
+import Detail from './components/Detail'
+import Cart from './components/Cart'
+
 
 // StyleSheet
 
@@ -29,6 +33,7 @@ function App() {
   let [comingsoon, setComingsoon] = useState(data4);
   let [userblog, Setuserblog] = useState(data5);
   let [partners, setPartners] = useState(data6);
+  let [no, setNo] = useState([0, 1, 2, 3, 4, 5, 6, 7, 8, 9]);
 
   return (
     <div className="App">
@@ -50,8 +55,9 @@ function App() {
                 </Offcanvas.Header>
                 <Offcanvas.Body>
                   <Nav className="justify-content-end flex-grow-1 pe-3">
-                    <Nav.Link href="#action1">Home</Nav.Link>
-                    <Nav.Link href="#action2">Shop</Nav.Link>
+                    <Nav.Link href="/">Home</Nav.Link>
+                    <Nav.Link href="/detail/0">Shop</Nav.Link>
+                    <Nav.Link href="#action2">Cart</Nav.Link>
                     <NavDropdown
                       title="Dropdown"
                       id={`offcanvasNavbarDropdown-expand-${'md'}`}
@@ -79,14 +85,79 @@ function App() {
               </Navbar.Offcanvas>
             </Container>
           </Navbar>
+
+
+
         ))}
 
-        <Home shippinginfo={shippinginfo} character={character} product={product} review={review} comingsoon={comingsoon} userblog={userblog}
-        partners={partners} />
+        <Routes>
+
+          <Route path="/" element={<Home shippinginfo={shippinginfo} character={character} product={product} review={review} comingsoon={comingsoon} userblog={userblog}
+            partners={partners} no={no} />} />
+
+          <Route path="/detail/:id" element={<Detail product={product} />} />
+
+          <Route path="/cart" element={<Cart />} />
+        </Routes>
+
+
+
+
 
         {/* Footer */}
 
+        <footer>
+          <div className='footer_main'>
+            <div className='footer_about'>
+              <h6>about us</h6>
+              <ul>
+                <li>our story</li>
+                <li>Affiliate Program</li>
+                <li>Wholesale Program</li>
+                <li>Press Inquiries</li>
+                <li>Careers</li>
+              </ul>
+            </div>
+            <div className='footer_customer'>
+              <h6>customer support</h6>
+              <ul>
+                <li>Returns & Exchanges</li>
+                <li>Shipping Information</li>
+                <li>Track Your Order</li>
+                <li>Promo Code Lookup</li>
+                <li>Gift Card Lookup</li>
+                <li>Earn Rewards</li>
+                <li>Payment Plans</li>
+                <li>Retail Store Locator</li>
+                <li>Help Center</li>
+                <li>Contact Us</li>
+              </ul>
+            </div>
 
+            <div className='Footer_connect'>
+              <h6>connect with us</h6>
+              <div>
+                <span></span>
+              </div>
+              <p>Want $20 Off? Sign up for our Newsletter.<br />
+                Sign up for SMS alerts and be the first to know!</p>
+              <button>Get in the loop</button>
+            </div>
+          </div>
+          <div className='footer_colphon'>
+            <ul className='colphon_links'>
+              <img src='/img/accredited_business.png' />
+              <li>Privacy Policy</li>
+              <span>|</span>
+              <li>Terms & Conditions</li>
+              <span>|</span>
+              <li>Accessibility Statement</li>
+            </ul>
+            <div className='className=' colphon_colyright>
+              <p>Series content, product specifications, release dates and pricing are subject to change. Sideshow Collectibles is the registered <br />trademark and copyright of Sideshow Inc. All Rights Reserved.</p>
+            </div>
+          </div>
+        </footer>
 
       </>
     </div>

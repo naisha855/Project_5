@@ -11,7 +11,7 @@ import Partners from './Partners';
 import Userblog from './Userblog';
 
 const Home = (props) => {
-    let { character, product, review, comingsoon, userblog, partners, shippinginfo } = props;
+    let { character, product, review, comingsoon, userblog, partners, shippinginfo, no } = props;
     return (
 
         <>
@@ -123,7 +123,7 @@ const Home = (props) => {
                                 {
                                     product.map((product, i) =>
                                         <SwiperSlide>
-                                            <Bestfigure product={product} key={i} />
+                                            <Bestfigure product={product} key={i} i={i} no={no}/>
                                         </SwiperSlide>)}
                             </Swiper>
                         </Col>
@@ -210,30 +210,35 @@ const Home = (props) => {
 
                 <Image src="/img/section_7.jpg" width={'100%'} fluid />;
 
-                <div className='title'>
-                    <h2>SiDESHoW Blog</h2>
-                    <p>Welcome to my blog</p>
-                </div>
+
 
                 {/* section8 */}
 
-                {/* { <Swiper
-                slidesPerView={3}
-                spaceBetween={30}
-                pagination={{
-                    clickable: true,
-                }}
-                modules={[Pagination]}
-                className="userblogmySwiper"
-            >
-                {
-                    userblog.map((userblog, i) =>
-                        <SwiperSlide key={i}>
-                            <Userblog userblog={userblog} />
-                        </SwiperSlide>
-                    )
-                }
-            </Swiper> } */}
+                <div className='title'>
+                    <h2>SiDESHoW recommend</h2>
+                    <p>Welcome to my site</p>
+                </div>
+
+                {<Swiper
+                    slidesPerView={3}
+                    spaceBetween={30}
+                    pagination={{
+                        clickable: true,
+                    }}
+                    modules={[Pagination]}
+                    className="userblogmySwiper"
+                >
+
+
+
+                    {
+                        userblog.map((userblog, i) =>
+                            <SwiperSlide key={i}>
+                                <Userblog userblog={userblog} />
+                            </SwiperSlide>
+                        )
+                    }
+                </Swiper>}
 
                 {/* section9 */}
                 <div className='section9'>

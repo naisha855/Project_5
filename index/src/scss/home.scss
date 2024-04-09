@@ -33,9 +33,6 @@ $MainWhite: #f4f4f4;
     margin: 60px 0;
     text-align: left;
 
-    h2 {
-        font-family: 'Star Wars', sans-serif;
-    }
 }
 
 /* Section1 */
@@ -152,7 +149,13 @@ padding: 30px;
     border: 2px solid $MainWhite;
     text-align: left;
 }
+.section5_list{
+    display: flex;
+}
 
+.section5_list img{
+margin-right: 20px;
+}
 // Section6
 
 .section6 {
@@ -197,15 +200,22 @@ padding: 30px;
     }
 }
 
+// Section8
 
+.section8{
+    margin-bottom: 60px;
+}
+
+.section8 img{
+display:none;
+}
 
 // Section9
 
 .section9 {
-    .row {
-        img {
-            height: 100px;
-        }
+
+    img {
+        height: 100px;
     }
 }
 

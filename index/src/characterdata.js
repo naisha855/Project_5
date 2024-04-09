@@ -23,20 +23,20 @@ let data = [
     {
         id: 3,
         title: "Han solo",
-        imgUrl: "",
+        imgUrl: "/img/Han_Solo_title.png",
         content: "Rebel Alliance, General"
     },
 
     {
         id: 4,
         title: "obi-wan Kenobi",
-        imgUrl: "obi-wan_Kenobi_title.png",
+        imgUrl: "/img/obi-wan_Kenobi.png",
         content: "Jedi, Master"
     },
     {
         id: 5,
         title: "Darth Sidious",
-        imgUrl: "",
+        imgUrl: "/img/Darth_Sidious.png",
         content: "Galactic Empire, Emperor"
     }
     

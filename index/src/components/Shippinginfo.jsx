@@ -6,8 +6,8 @@ import { Col } from 'react-bootstrap'
 const Shippinginfo = (props) => {
     let { imgUrl, title, text } = props.shippinginfo;
     return (
-        <Col xs={6} md={4}>
-            <img src={imgUrl} alt="" />
+        <Col xs={6} md={4} className='section5_list'>
+            <img src={imgUrl} alt="" width={'80px'} height={'80px'}/>
             <div>
             <h3>{title}</h3>
             <p>{text}</p>
