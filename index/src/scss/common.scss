@@ -3,9 +3,18 @@
 @import url('https://fonts.cdnfonts.com/css/star-wars');
 /* font-family: 'Star Wars', sans-serif; */
 
+.russo-one-regular {
+  font-family: "Russo One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
 $MainBlack: #000;
 $SubBlack: #1D1E1F;
 $MainWhite: #f4f4f4;
+$StarWarsYellow: #fade4b;
+$MainGray: #B5B7B7;
 
 .App {
   text-align: center;
@@ -22,11 +31,16 @@ a {
 
 h1 {
   font-family: 'Star Wars', sans-serif;
-  color: white;
+  color: $StarWarsYellow;
 }
 
 h2 {
   font-family: 'Star Wars', sans-serif;
+  color: $StarWarsYellow;
+}
+
+h3{
+  font-size: 20px;
 }
 
 h4 {
@@ -36,6 +50,7 @@ h4 {
 
 h5 {
   font-size: 12px;
+  color: $MainGray
 }
 
 h6 {
@@ -98,5 +113,21 @@ footer {
   span {
     margin-left: .8rem;
     padding-right: .8rem;
+  }
+}
+
+@media screen and (max-width: 1308px) {
+
+
+  
+  .footer_main {
+    width: 100%;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-around;
+  }
+  .footer_colphon {
+    width: 100%;
+    margin: 0 auto;
   }
 }

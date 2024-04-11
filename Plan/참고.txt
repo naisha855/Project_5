@@ -11,7 +11,6 @@
 내용 참고
 
 https://www.sideshow.com/brands/star-wars/type/all-figures
-
 (자료 소실될 경우 검색해보기: Star wars figure us)
 
 
@@ -42,3 +41,8 @@ https://minkyung05.github.io/project4_react_jordan/
 https://subin114.github.io/
 
 https://lej99.github.io/project_5/
+
+
+수정 사항
+
+- Slide 폰트 생각하기

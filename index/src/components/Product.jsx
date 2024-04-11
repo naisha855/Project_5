@@ -9,7 +9,7 @@ const Product = (props) => {
     <Col md={4} className='character'>
       <img src={imgUrl} alt="" className='characterimage'
       width={'160px'} height={'220px'}/>
-      <div>
+      <div className='Character_page'>
       <h4>{title}</h4>
       <p>{content}</p>
       <a href="#">Shop Now</a>

@@ -30,7 +30,7 @@ let data = [
     {
         id: 4,
         title: "obi-wan Kenobi",
-        imgUrl: "/img/obi-wan_Kenobi.png",
+        imgUrl: "/img/obi-wan_Kenobi_title.png",
         content: "Jedi, Master"
     },
     {

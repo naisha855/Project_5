@@ -15,3 +15,5 @@ const TabContent = (props) => {
     }  
 
   }
+
+  export default TabContent

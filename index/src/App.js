@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import {
   Container, Navbar, Nav, NavDropdown, Form, Button, Offcanvas, Image
 } from 'react-bootstrap';
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, useNavigate } from 'react-router-dom'
 import data from './characterdata.js'
 import data2 from './productdata.js'
 import data3 from "./reviewdata.js"
@@ -34,6 +34,7 @@ function App() {
   let [userblog, Setuserblog] = useState(data5);
   let [partners, setPartners] = useState(data6);
   let [no, setNo] = useState([0, 1, 2, 3, 4, 5, 6, 7, 8, 9]);
+  let navigate = useNavigate();
 
   return (
     <div className="App">
@@ -41,7 +42,7 @@ function App() {
         {['md'].map((expand) => (
           <Navbar>
             <Container fluid>
-              <Navbar.Brand href="#"><Image src="/img/logo.png" height={'50px'} /></Navbar.Brand>
+              <Navbar.Brand onClick={()=>{navigate('/')}}><Image src="/img/logo.png" height={'50px'} /></Navbar.Brand>
               <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${'md'}`} />
               <Navbar.Offcanvas
                 id={`offcanvasNavbar-expand-${expand}`}
@@ -55,9 +56,9 @@ function App() {
                 </Offcanvas.Header>
                 <Offcanvas.Body>
                   <Nav className="justify-content-end flex-grow-1 pe-3">
-                    <Nav.Link href="/">Home</Nav.Link>
-                    <Nav.Link href="/detail/0">Shop</Nav.Link>
-                    <Nav.Link href="#action2">Cart</Nav.Link>
+                    <Nav.Link onClick={()=>{navigate('/')}}>Home</Nav.Link>
+                    <Nav.Link onClick={()=>{navigate('/Detail/0')}}>Shop</Nav.Link>
+                    <Nav.Link onClick={()=>{navigate('/Cart')}}>Cart</Nav.Link>
                     <NavDropdown
                       title="Dropdown"
                       id={`offcanvasNavbarDropdown-expand-${'md'}`}

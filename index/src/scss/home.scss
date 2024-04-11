@@ -1,10 +1,13 @@
 @charset "utf-8";
 
 $MainBlack: #000;
-$SubBlack: #5A5C5D;
+$SubBlack: #1D1E1F;
 $MainWhite: #f4f4f4;
-// #1D1E1F;
+$StarWarsYellow: #fade4b;
+$MainGray: #B5B7B7;
 
+
+// #5A5C5D
 
 
 /* Slider */
@@ -19,6 +22,7 @@ $MainWhite: #f4f4f4;
 
 .slider1 {
     background-image: url(/../public/img/slider1.jpg);
+
 }
 
 .slider2 {
@@ -32,6 +36,22 @@ $MainWhite: #f4f4f4;
 .title {
     margin: 60px 0;
     text-align: left;
+
+}
+
+// Slider
+
+.Slider {
+
+    h1 {
+        margin-bottom: 400px;
+    }
+    p {
+        color: $MainWhite;
+        margin-bottom: 50px;
+        font-family: "Russo One", sans-serif;
+        font-size: 16px;
+    }
 
 }
 
@@ -55,18 +75,35 @@ $MainWhite: #f4f4f4;
 
 .character {
     text-align: left;
+    margin-bottom: 30px;
 
     img {
         width: auto;
         height: 200px;
     }
+
+h4{
+    margin-top: 20px ;
 }
 
+    a{
+        color: $StarWarsYellow
+    }
+}
+
+.Character_page{
+    width: 90%;
+    background-color: $SubBlack;
+}
 /* section3 */
 
 .section3 {
     display: flex;
     flex-direction: row;
+
+    a{
+        color: $MainWhite;
+    }
 
     .row {
         height: 500px;
@@ -118,7 +155,7 @@ $MainWhite: #f4f4f4;
     padding: 30px 57px 30px 40px;
     background-color: $SubBlack;
 
-    .profileimage{
+    .profileimage {
         margin-top: 20px;
         margin-right: 10px;
     }
@@ -134,9 +171,10 @@ $MainWhite: #f4f4f4;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-background-color: $MainBlack;
-border-radius: 10px;
-padding: 30px;
+        background-color: $MainBlack;
+        border-radius: 10px;
+        padding: 30px;
+
         p {
             font-size: 14px;
         }
@@ -145,17 +183,27 @@ padding: 30px;
 
 // Section5
 
-.section5{
+.section5 {
     border: 2px solid $MainWhite;
     text-align: left;
-}
-.section5_list{
-    display: flex;
+    padding: 10px;
+    p{
+        font-size: 13px;
+    }
 }
 
-.section5_list img{
-margin-right: 20px;
+.section5_list {
+    display: flex;
+    align-items: center;
+    width: 50%;
 }
+
+.section5_list img {
+    width: 45px;
+    height: 45px;
+    margin-right: 20px;
+}
+
 // Section6
 
 .section6 {
@@ -163,21 +211,26 @@ margin-right: 20px;
     background-color: transparent;
 
 
-    .swiper{
+    .swiper {
         height: 75%;
 
-        .swiper-pagination-bullet{background-color: $MainWhite;}
+        .swiper-pagination-bullet {
+            background-color: $MainWhite;
+        }
 
     }
+
     .comingsoon {
         height: 200px;
-        border: 1px solid gray;
-        border-radius: 10px;
         display: flex;
         flex-direction: row;
         align-items: center;
         padding: 10px;
         text-align: left;
+background-color: $SubBlack;
+a{
+    color: $MainWhite;
+}
 
         img {
             height: 120px;
@@ -202,12 +255,12 @@ margin-right: 20px;
 
 // Section8
 
-.section8{
+.section8 {
     margin-bottom: 60px;
 }
 
-.section8 img{
-display:none;
+.section8 img {
+    display: none;
 }
 
 // Section9

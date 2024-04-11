@@ -16,22 +16,22 @@ const Home = (props) => {
 
         <>
             {/* Slider */}
-            <Carousel data-bs-theme="dark">
+            <Carousel data-bs-theme="dark" className='Slider'>
                 <Carousel.Item className='slider1'>
                     <Carousel.Caption>
-                        <h1>Well come! to the SIDESHOW</h1>
-                        <p>30Years star wars action figure shop</p>
+                        <h1>Well come to the SIDESHOW</h1>
+                        <p>30 Years star wars action figure shop</p>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item className='slider2'>
                     <Carousel.Caption>
                         <h1>Star Wars Action Figures</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <p>Are you one with the Force, young Padawan? With our epic range of Star Wars action figures, your local star system will be bursting with legendary favorites. Whether you're a Rebel at heart or you have a soft spot for the dark side, we've got the droids, Wookiees, and Jedi Masters to boost your shelf's interstellar style. To explore the galaxy far, far away in greater depth, check out our Star Wars collectibles. Then, if you think your collection can handle more, your next adventure lies within our entire action figures collection. May the Force (of collecting) be with you!</p>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item className='slider3'>
                     <Carousel.Caption>
-                        <h1>Third slide label</h1>
+                        <h1>Meet the various events</h1>
                         <p>
                             Praesent commodo cursus magna, vel scelerisque nisl consectetur.
                         </p>
