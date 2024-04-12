@@ -10,7 +10,7 @@ const Bestfigure = (props) => {
     let { i , no } = props;
 
     return (
-        <div style={{ display: 'flex', flexDirection: 'column' }}>
+        <div    className='Section3_page' style={{ display: 'flex', flexDirection: 'column' }}>
             <Nav.Link onClick={()=>navigate('/detail/' + no[i])}>
             <div>
                 <img src={imgUrl} alt="item" className='section3_img'

@@ -22,7 +22,7 @@ let data2 = [
     },
     {
         id: 3,
-        title: "BOBA FETT™(DELUXE VERSION)",
+        title: "BOBA FETT(DELUXE VERSION)",
         imgUrl: "/img/BOBA_FETT.png",
         size: "Sixth Scale Figure Set",
         price: "$500"

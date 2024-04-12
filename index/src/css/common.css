@@ -1,12 +1,36 @@
 @import url("https://fonts.cdnfonts.com/css/star-wars");
 /* font-family: 'Star Wars', sans-serif; */
+.russo-one-regular {
+  font-family: "Russo One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.App {
+  text-align: center;
+}
+
+#root {
+  background-color: #000;
+  color: #f4f4f4;
+}
+
 a {
   font-size: 14px;
 }
 
 h1 {
   font-family: "Star Wars", sans-serif;
-  color: white;
+  color: #fade4b;
+}
+
+h2 {
+  font-family: "Star Wars", sans-serif;
+  color: #fade4b;
+}
+
+h3 {
+  font-size: 20px;
 }
 
 h4 {
@@ -16,8 +40,75 @@ h4 {
 
 h5 {
   font-size: 12px;
+  color: #B5B7B7;
 }
 
-.App {
-  text-align: center;
+h6 {
+  font-family: "Star Wars", sans-serif;
+  font-size: 20px;
+}
+
+nav {
+  background-color: white;
+}
+
+footer {
+  padding: 60px 0;
+  border-top: 1px solid #f4f4f4;
+  text-align: left;
+  margin-top: 30px;
+  width: 100%;
+}
+
+.footer_main {
+  width: 1290px;
+  display: flex;
+  margin: 0 auto;
+}
+
+.footer_about {
+  width: 20%;
+}
+.footer_about li {
+  height: 24px;
+  margin-bottom: 10px;
+}
+
+.footer_customer {
+  width: 40%;
+}
+.footer_customer li {
+  height: 24px;
+  margin-bottom: 10px;
+}
+
+.footer_colphon {
+  width: 1290px;
+  margin: 0 auto;
+}
+
+.colphon_links {
+  display: flex;
+  align-items: center;
+}
+.colphon_links img {
+  width: 100px;
+  margin-right: 2.2rem;
+}
+.colphon_links span {
+  margin-left: 0.8rem;
+  padding-right: 0.8rem;
+}
+
+@media screen and (max-width: 1308px) {
+  .footer_main {
+    width: 100%;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-around;
+  }
+  .footer_colphon {
+    width: 100%;
+    margin: 0 auto;
+  }
 }

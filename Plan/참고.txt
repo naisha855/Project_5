@@ -42,7 +42,10 @@ https://subin114.github.io/
 
 https://lej99.github.io/project_5/
 
+Media size
+
 
 수정 사항
 
 - Slide 폰트 생각하기
+- section2 img 조정

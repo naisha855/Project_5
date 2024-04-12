@@ -46,6 +46,7 @@ $MainGray: #B5B7B7;
     h1 {
         margin-bottom: 400px;
     }
+
     p {
         color: $MainWhite;
         margin-bottom: 50px;
@@ -53,6 +54,10 @@ $MainGray: #B5B7B7;
         font-size: 16px;
     }
 
+}
+
+.slider1 h1 {
+    margin-bottom: 50px;
 }
 
 /* Section1 */
@@ -78,35 +83,39 @@ $MainGray: #B5B7B7;
     margin-bottom: 30px;
 
     img {
-        width: auto;
         height: 200px;
+        width: 90%;
     }
 
-h4{
-    margin-top: 20px ;
-}
+    h4 {
+        margin-top: 20px;
+    }
 
-    a{
+    a {
         color: $StarWarsYellow
     }
 }
 
-.Character_page{
+.Character_page {
     width: 90%;
+    margin-top: 20px;
+    padding: 10px 20px ;
     background-color: $SubBlack;
 }
+
 /* section3 */
 
 .section3 {
     display: flex;
     flex-direction: row;
 
-    a{
+    a {
         color: $MainWhite;
     }
 
     .row {
-        height: 500px;
+
+
 
         .left {
             .swiper-slide {
@@ -117,6 +126,17 @@ h4{
             img {
                 height: 300px;
             }
+
+            a{
+                font-size: 20px;
+            }
+            h5{
+                font-size: 18px;
+            }
+
+            p{
+                font-size: 24px;
+            }
         }
 
         .right {
@@ -125,9 +145,6 @@ h4{
 
                 img {
                     height: 120px;
-                    background-position: center;
-                    background-size: cover;
-
                 }
             }
         }
@@ -138,14 +155,37 @@ h4{
     text-align: left;
 }
 
+.Section3_page{
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+}
+
+.Section3_page:hover{
+    transition: 1s;
+    background-color: $MainGray;
+    a{
+        color: $StarWarsYellow;
+    }
+    h5{
+        color: $MainBlack;
+    }
+    p{
+        color:$MainWhite;
+    }
+
+}
+
 // section4
 
 .section4 {
-    padding: 60px 0 52px 0;
     background-position: center;
     background-size: cover;
-    // background-image: url(/index/public/img/section4_wallpaper.jpg);
+    // background-image: url(/../public/img/section4_wallpaper.jpg);
+        padding: 60px 0 52px 0;
 }
+
+
 
 .userreview {
     display: flex;
@@ -187,7 +227,8 @@ h4{
     border: 2px solid $MainWhite;
     text-align: left;
     padding: 10px;
-    p{
+
+    p {
         font-size: 13px;
     }
 }
@@ -227,10 +268,11 @@ h4{
         align-items: center;
         padding: 10px;
         text-align: left;
-background-color: $SubBlack;
-a{
-    color: $MainWhite;
-}
+        background-color: $SubBlack;
+
+        a {
+            color: $MainWhite;
+        }
 
         img {
             height: 120px;
@@ -238,9 +280,20 @@ a{
         }
     }
 
-    .comimgsoonmySwiper {
-        height: 950px;
+    .comingsoon:hover{
+        transition: 1s;
+        background-color: $MainGray;
+        h5{
+            color: $StarWarsYellow
+        }
+        a{
+            color: $SubBlack;
+        }
+    }
 
+    .comimgsoonmySwiper {
+
+        height: 950px;
 
     }
 
@@ -255,8 +308,34 @@ a{
 
 // Section8
 
+.swiper-slide{
+    background: transparent;
+}
 .section8 {
+    height: 300px;
     margin-bottom: 60px;
+    background-color: $SubBlack;
+    text-align: left;
+    padding: 10px;
+
+
+
+
+    h3 {
+        font-size: 16px;
+        margin-top: 30px;
+    }
+
+    p, a {
+        font-size: 14px;
+        margin-bottom: 30px;
+    }
+
+button{
+    width: 80px;
+    height: 28px;
+}
+
 }
 
 .section8 img {
@@ -266,11 +345,24 @@ a{
 // Section9
 
 .section9 {
-
+    border: 1px solid $MainWhite;
+    margin-bottom: 60px;
+    margin-top: 30px;
+.swiper-slide{
+    background: transparent;
+}
     img {
         height: 100px;
     }
 }
+
+// Detail
+
+.Detail_img{
+    width: 330px;
+}
+
+
 
 @media screen and (max-width: 991px) {
 
@@ -285,4 +377,21 @@ a{
         }
     }
 
+}
+
+@media screen and (max-width: 768px) {
+    .section3 .container{
+        height: 1040px;
+        .row{
+            height: 100% !important;
+            .left{
+                height: 50%;
+
+            }
+            .right{
+                height: 50% !important;
+
+            }
+        }
+    }
 }

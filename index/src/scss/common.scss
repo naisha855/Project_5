@@ -10,7 +10,7 @@
 }
 
 
-$MainBlack: #000;
+$MainBlack: #222;
 $SubBlack: #1D1E1F;
 $MainWhite: #f4f4f4;
 $StarWarsYellow: #fade4b;
@@ -23,10 +23,6 @@ $MainGray: #B5B7B7;
 #root {
   background-color: $MainBlack;
   color: $MainWhite;
-}
-
-a {
-  font-size: 14px;
 }
 
 h1 {

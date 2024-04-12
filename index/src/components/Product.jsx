@@ -7,8 +7,7 @@ const Product = (props) => {
   let { title, content, imgUrl } = props.character;
   return (
     <Col md={4} className='character'>
-      <img src={imgUrl} alt="" className='characterimage'
-      width={'160px'} height={'220px'}/>
+      <img src={imgUrl} alt="" className='characterimage'/>
       <div className='Character_page'>
       <h4>{title}</h4>
       <p>{content}</p>

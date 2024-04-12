@@ -53,7 +53,7 @@ const Home = (props) => {
                     <h2>Star Wars Character</h2>
                     <p>A long time ago in a galaxy far, far away....</p>
                 </div>
-                <Row>
+                <Row className='Section2'>
                     {
                         character.map((character, i) =>
                             <Product character={character} key={i} />)
@@ -74,7 +74,7 @@ const Home = (props) => {
                     <Row style={{ height: 500 }}>
                         <Col className='left' md={5} xl={4}>
                             <Swiper
-                                slidesPerView={2}
+                                slidesPerView={1}
                                 spaceBetween={20}
                                 navigation={true}
                                 // grid={{
@@ -122,8 +122,8 @@ const Home = (props) => {
                             >
                                 {
                                     product.map((product, i) =>
-                                        <SwiperSlide>
-                                            <Bestfigure product={product} key={i} i={i} no={no}/>
+                                        <SwiperSlide className='Bestfigure_list'>
+                                            <Bestfigure product={product} key={i} i={i} no={no} />
                                         </SwiperSlide>)}
                             </Swiper>
                         </Col>
@@ -164,9 +164,10 @@ const Home = (props) => {
 
                     </Swiper>
                 </div>
+            </Container>
 
                 {/* Section5 */}
-
+                <Container>
                 <Row className='section5'>
                     {
                         shippinginfo.map((shippinginfo, i) =>
@@ -228,9 +229,6 @@ const Home = (props) => {
                     modules={[Pagination]}
                     className="userblogmySwiper"
                 >
-
-
-
                     {
                         userblog.map((userblog, i) =>
                             <SwiperSlide key={i}>
@@ -245,7 +243,7 @@ const Home = (props) => {
                     <Swiper watchSlidesProgress={true} slidesPerView={3} className="partnersmySwiper">
                         {
                             partners.map((partners, i) =>
-                                <SwiperSlide key={i}>
+                                <SwiperSlide key={i} >
                                     <Partners partners={partners} />
                                 </SwiperSlide>
                             )
