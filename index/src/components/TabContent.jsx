@@ -1,9 +1,12 @@
+import React from 'react'
+
 const TabContent = (props) => {
-    let {tab} = props;
+    let { tab } = props;
+    // let { imgProduct1 } = props.product;
     if(tab===0){
   
       return <div>내용0</div>
-  
+      // {imgProduct1}
     }else if(tab===1){
   
       return <div>내용1</div>
@@ -13,7 +16,6 @@ const TabContent = (props) => {
       return <div>내용2</div>
 
     }  
-
   }
 
   export default TabContent

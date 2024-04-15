@@ -35,7 +35,7 @@ h2 {
   color: $StarWarsYellow;
 }
 
-h3{
+h3 {
   font-size: 20px;
 }
 
@@ -54,7 +54,7 @@ h6 {
   font-size: 20px;
 }
 
-nav{
+nav {
   background-color: white;
 }
 
@@ -80,16 +80,35 @@ footer {
   li {
     height: 24px;
     margin-bottom: 10px;
+    padding: 1rem 0;
   }
 }
 
 .footer_customer {
   width: 40%;
 
+  ul {
+    columns: 2;
+  }
+
   li {
     height: 24px;
     margin-bottom: 10px;
+    padding: 1rem 0;
   }
+}
+
+.Footer_connect{
+  .footer_span{
+margin: 2.7rem 0;
+}
+span img{width: 30px; height: 30px;}
+button{
+  padding: .9rem 3.5rem;
+  border: .1rem solid transparent;
+  line-height: 2rem;
+  cursor: pointer;
+}
 }
 
 .footer_colphon {
@@ -115,13 +134,14 @@ footer {
 @media screen and (max-width: 1308px) {
 
 
-  
+
   .footer_main {
     width: 100%;
     display: flex;
     margin: 0 auto;
     justify-content: space-around;
   }
+
   .footer_colphon {
     width: 100%;
     margin: 0 auto;

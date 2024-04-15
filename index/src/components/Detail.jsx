@@ -40,19 +40,19 @@ const Detail = (props) => {
                     <h4 className='pt-5'>{selproduct.title}</h4>
                     <p>{selproduct.text}</p>
                     <p>{selproduct.price} $</p>
-                    <Button variant='sucess' onClick= {()=>{dispatch(addItem({id: selproduct.id, item: selproduct.title, amount: 1}))}}>Add to cart</Button>
+                    <Button color='white' classvariant='sucess' onClick= {()=>{dispatch(addItem({id: selproduct.id, item: selproduct.title, amount: 1}))}}>Add to cart</Button>
                 </Col>
             </Row>
             <Nav variant="tabs" defaultActiveKey="link0">
 
                 <Nav.Item>
-                    <Nav.Link onClick={() => { setTab(0) }} eventKey="link0">Product</Nav.Link>
+                    <Nav.Link className='Detail_tag' onClick={() => { setTab(0) }} eventKey="link0">Product</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                    <Nav.Link onClick={() => { setTab(1) }} eventKey="link1">Preview</Nav.Link>
+                    <Nav.Link className='Detail_tag' onClick={() => { setTab(1) }} eventKey="link1">Preview</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                    <Nav.Link onClick={() => { setTab(2) }} eventKey="link2">REVIEWS</Nav.Link>
+                    <Nav.Link className='Detail_tag' onClick={() => { setTab(2) }} eventKey="link2">REVIEWS</Nav.Link>
                 </Nav.Item>
             </Nav>
 
