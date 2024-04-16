@@ -151,6 +151,7 @@ function App() {
               <button>Get in the loop</button>
             </div>
           </div>
+          <br/><br/><br/><br/><br/>
           <div className='footer_colphon'>
             <ul className='colphon_links'>
               <img src='/img/accredited_business.png' />

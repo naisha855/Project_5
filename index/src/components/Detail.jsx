@@ -27,12 +27,12 @@ const Detail = (props) => {
         <Container>
             {
                 alert === true ?
-                    <Alert variant='warning'>
+                    <Alert variant='warning' className='sale_warning'>
                         !Warning! 은하제국 습격 중! 30초 이내에 은하제국 피규어 구매 시, 15% 할인 !Warning!
                     </Alert>
                     : null
             }
-            <Row>
+            <Row className='Detail_productpage'>
                 <Col md={6} >
                     <img src={product[id].imgUrl} className='Detail_img'/>
                 </Col>

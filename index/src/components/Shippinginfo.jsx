@@ -8,7 +8,7 @@ const Shippinginfo = (props) => {
     return (
         <Col xs={6} md={4} className='section5_list'>
             <img src={imgUrl} alt="" width={'80px'} height={'80px'}/>
-            <div>
+            <div className='section5_textpage'>
             <h3>{title}</h3>
             <p>{text}</p>
             </div>

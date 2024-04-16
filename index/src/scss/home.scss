@@ -62,7 +62,7 @@ $MainGray: #B5B7B7;
 
 /* Section1 */
 .section1 {
-    margin: 60px 0;
+    margin: 100px 0;
 
     .col-lg-3,
     .col-lg-6 {
@@ -129,14 +129,21 @@ $MainGray: #B5B7B7;
 
             a {
                 font-size: 20px;
+                margin: 10px 0;
             }
 
             h5 {
                 font-size: 18px;
+                margin-bottom: 20px;
             }
 
             p {
                 font-size: 24px;
+            }
+
+            .best_figure {
+                padding: 50px;
+                text-align: left;
             }
         }
 
@@ -153,6 +160,7 @@ $MainGray: #B5B7B7;
 }
 
 .best_figure {
+    padding: 20px 5px;
     text-align: left;
 }
 
@@ -232,6 +240,7 @@ $MainGray: #B5B7B7;
     border: 2px solid $MainWhite;
     text-align: left;
     padding: 10px;
+    margin: 100px 0;
 
     p {
         font-size: 13px;
@@ -248,6 +257,7 @@ $MainGray: #B5B7B7;
     width: 45px;
     height: 45px;
     margin-right: 20px;
+    margin-bottom: 20px;
 }
 
 // Section6
@@ -255,7 +265,8 @@ $MainGray: #B5B7B7;
 .section6 {
     height: 650px;
     background-color: transparent;
-
+    margin-top: 200px;
+    margin-bottom: 100px;
 
     .swiper {
         height: 75%;
@@ -314,21 +325,25 @@ $MainGray: #B5B7B7;
     }
 }
 
-// Section8
+// Section7
 
-.swiper-slide {
-    background: transparent;
+.Section7 {
+    margin-bottom: 100px;
+}
+
+// Section8
+.userblogmySwiper {
+    .swiper-slide {
+        background: transparent;
+    }
 }
 
 .section8 {
     height: 300px;
-    margin-bottom: 60px;
+    margin: 100px 0;
     background-color: $SubBlack;
     text-align: left;
     padding: 20px;
-
-
-
 
     h3 {
         font-size: 16px;
@@ -360,8 +375,7 @@ $MainGray: #B5B7B7;
 
 .section9 {
     border: 1px solid $MainWhite;
-    margin-bottom: 60px;
-    margin-top: 30px;
+    margin: 200px 0;
 
     .swiper-slide {
         background: transparent;
@@ -375,6 +389,10 @@ $MainGray: #B5B7B7;
 
 // Detail
 
+.Detail_productpage {
+    margin-top: 100px;
+}
+
 .Detail_img {
     width: 330px;
 }
@@ -383,6 +401,23 @@ $MainGray: #B5B7B7;
     color: $MainWhite;
 }
 
+.nav-tabs {
+    margin-top: 100px;
+}
+
+// Cart
+
+.Sort_button {
+    background-color: transparent;
+    border: none;
+    color: $MainWhite;
+    font-size: 18px;
+}
+
+.Sort_button:hover {
+    transition: 0.5s;
+    color: $StarWarsYellow;
+}
 
 @media screen and (max-width: 991px) {
 
@@ -400,6 +435,10 @@ $MainGray: #B5B7B7;
 }
 
 @media screen and (max-width: 768px) {
+    .navbar-brand img {
+        display: none;
+    }
+
     .section3 .container {
         height: 1040px;
 

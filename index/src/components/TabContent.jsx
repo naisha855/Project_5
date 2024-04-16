@@ -13,7 +13,7 @@ const TabContent = (props) => {
   
     }else if(tab===2){
   
-      return <div>내용2</div>
+      return <div>Review</div>
 
     }  
   }

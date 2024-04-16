@@ -53,7 +53,16 @@ const Home = (props) => {
                     <h2>Star Wars Character</h2>
                     <p>A long time ago in a galaxy far, far away....</p>
                 </div>
-                <Row className='Section2'>
+                <Row className='Section2'
+                                        breakpoints={{
+
+                                
+                                            768: {
+                                              slidesPerView: 2,
+                                            },
+
+                                
+                                          }}>
                     {
                         character.map((character, i) =>
                             <Product character={character} key={i} />)
@@ -153,6 +162,17 @@ const Home = (props) => {
                         }}
                         modules={Pagination}
                         className="reviewmySwiper"
+                        breakpoints={{
+                            1: {
+                                slidesPerView: 1,
+                                spaceBetween: 20,
+                              },
+                
+                            768: {
+                              slidesPerView: 2,
+                              spaceBetween: 20,
+                            }
+                          }}
                     >
                         {
                             review.map((review, i) =>
@@ -166,8 +186,8 @@ const Home = (props) => {
                 </div>
             </Container>
 
-                {/* Section5 */}
-                <Container>
+            {/* Section5 */}
+            <Container>
                 <Row className='section5'>
                     {
                         shippinginfo.map((shippinginfo, i) =>
@@ -196,6 +216,19 @@ const Home = (props) => {
                         }}
                         modules={[Grid, Pagination]}
                         className="comingsoonmySwiper"
+                        breakpoints={{
+                            1: {
+                                slidesPerView: 1,
+                              },
+                
+                            768: {
+                              slidesPerView: 2,
+                            },
+                            991: {
+                              slidesPerView: 3,
+                            },
+                
+                          }}
                     >
                         {
                             comingsoon.map((comingsoon, i) =>
@@ -209,7 +242,7 @@ const Home = (props) => {
 
                 {/* section7 */}
 
-                <Image src="/img/section_7.jpg" width={'100%'} fluid />;
+                <Image className="Section7"src="/img/section_7.jpg" width={'100%'} fluid />
 
 
 
@@ -228,6 +261,22 @@ const Home = (props) => {
                     }}
                     modules={[Pagination]}
                     className="userblogmySwiper"
+                    breakpoints={{
+                        1: {
+                            slidesPerView: 1,
+                            spaceBetween: 20,
+                          },
+            
+                        768: {
+                          slidesPerView: 2,
+                          spaceBetween: 20,
+                        },
+                        991: {
+                          slidesPerView: 3,
+                          spaceBetween: 40,
+                        },
+            
+                      }}
                 >
                     {
                         userblog.map((userblog, i) =>
@@ -240,7 +289,23 @@ const Home = (props) => {
 
                 {/* section9 */}
                 <div className='section9'>
-                    <Swiper watchSlidesProgress={true} slidesPerView={3} className="partnersmySwiper">
+                    <Swiper watchSlidesProgress={true} slidesPerView={3} className="partnersmySwiper"
+        breakpoints={{
+            1: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+              },
+
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            991: {
+              slidesPerView: 3,
+              spaceBetween: 40,
+            },
+
+          }}>
                         {
                             partners.map((partners, i) =>
                                 <SwiperSlide key={i} >
