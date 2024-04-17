@@ -209,6 +209,7 @@ const Home = (props) => {
                         slidesPerView={3}
                         grid={{
                             rows: 2,
+                            column: 2,
                         }}
                         spaceBetween={30}
                         pagination={{

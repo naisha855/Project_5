@@ -33,14 +33,28 @@ const Detail = (props) => {
                     : null
             }
             <Row className='Detail_productpage'>
-                <Col md={6} >
+                <Col md={6} className='Detail_imglayer'>
                     <img src={product[id].imgUrl} className='Detail_img'/>
                 </Col>
-                <Col md={6}>
+                <Col md={6} className='Detail_page'>
                     <h4 className='pt-5'>{selproduct.title}</h4>
-                    <p>{selproduct.text}</p>
-                    <p>{selproduct.price} $</p>
-                    <Button color='white' classvariant='sucess' onClick= {()=>{dispatch(addItem({id: selproduct.id, item: selproduct.title, amount: 1}))}}>Add to cart</Button>
+
+                    <ul>
+                        <li><h3>Brand</h3>
+                        <p>{selproduct.brand}</p></li>
+                        <li><h3>Character</h3>
+                        <p>{selproduct.character}</p></li>
+                        <li><h3>Manufacturer</h3>
+                        <p>{selproduct. manufacturer}</p></li>
+                        <li><h3>Type</h3>
+                        <p>{selproduct.type}</p></li>
+                        <li><h3>Genre</h3>
+                        <p>{selproduct.genre}</p></li>
+                        <li><h3>Artists</h3>
+                        <p>{selproduct.artists}</p></li>
+                    </ul>
+                    <p>{selproduct.price}</p>
+                    <Button color='white' classvariant='sucess' onClick= {()=>{dispatch(addItem({id: selproduct.id,imgUrl: selproduct.imgUrl, item: selproduct.title, amount: 1}))}}>Add to cart</Button>
                 </Col>
             </Row>
             <Nav variant="tabs" defaultActiveKey="link0">
@@ -56,7 +70,7 @@ const Detail = (props) => {
                 </Nav.Item>
             </Nav>
 
-            <TabContent tab={tab} />
+            <TabContent tab={tab} selproduct={selproduct} />
 
         </Container>
     )

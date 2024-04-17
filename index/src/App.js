@@ -60,16 +60,16 @@ function App() {
                     <Nav.Link onClick={()=>{navigate('/Detail/0')}}>Shop</Nav.Link>
                     <Nav.Link onClick={()=>{navigate('/Cart')}}>Cart</Nav.Link>
                     <NavDropdown
-                      title="Dropdown"
+                      title="My"
                       id={`offcanvasNavbarDropdown-expand-${'md'}`}
                     >
-                      <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
+                      <NavDropdown.Item href="#action3">login</NavDropdown.Item>
                       <NavDropdown.Item href="#action4">
-                        Another action
+                        Create An Account
                       </NavDropdown.Item>
                       <NavDropdown.Divider />
                       <NavDropdown.Item href="#action5">
-                        Something else here
+                      Find ID & Password
                       </NavDropdown.Item>
                     </NavDropdown>
                   </Nav>
