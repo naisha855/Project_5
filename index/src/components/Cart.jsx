@@ -1,19 +1,27 @@
 import React, { useEffect, useState } from "react"
-import { Table } from 'react-bootstrap'
+import { Container, Table } from 'react-bootstrap'
 import { useDispatch, useSelector } from "react-redux"
 import { addCount, removeCount, sortName, removeItem } from '../store'
 
 const Cart = () => {
+   let user = useSelector(state => state.user);
+   let cart = useSelector(state => state.cart);
+   let { name, age } = user;
+   let dispatch = useDispatch()
+
+   console.log(cart)
 
    function total() {
       let sum = 0;
-      for (let v in state.cart) {
-         sum += state.cart[v].price = state.cart[v].count
+      for (let v of cart) {
+         sum += v.price * v.amount
       }
+      
       return sum
    }
    let [shipping, setShipping] = useState(3000);
    useEffect(() => {
+      
       function Shipping() {
          if (total() >= 50000) {
             setShipping(0);
@@ -22,15 +30,12 @@ const Cart = () => {
          }
       }
       Shipping();
-   })
-   let state = useSelector(state => state);
-   let user = useSelector(state => state.user);
-   let cart = useSelector(state => state.cart);
-   let { name, age } = user;
-   let dispatch = useDispatch()
+   },[])
+
+   
    return (
       <>
-
+<Container>
          <Table>
             <thead>
                <tr >
@@ -38,7 +43,8 @@ const Cart = () => {
                   <th>상품이미지</th>
                   <th>상품명</th>
                   <th>수량</th>
-                  <th>변경하기</th>
+                  <th>추가</th>
+                  <th>감소</th>
                </tr>
             </thead>
 
@@ -62,6 +68,8 @@ const Cart = () => {
          <button className="Sort_button" variant="outline-primary" onClick={() => {
             dispatch(sortName())
          }}>Sort by name</button>{''}
+         <p>{total()}</p>
+         </Container>
       </>
    );
 };

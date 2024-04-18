@@ -54,15 +54,17 @@ const Home = (props) => {
                     <p>A long time ago in a galaxy far, far away....</p>
                 </div>
                 <Row className='Section2'
-                                        breakpoints={{
+                    breakpoints={{
+                        768: {
+                            slidesPerView: 2,
+                            spaceBetween: 20
+                        },
+                        991: {
+                            slidesPerView: 3,
+                            spaceBetween: 20
+                        }
 
-                                
-                                            768: {
-                                              slidesPerView: 2,
-                                            },
-
-                                
-                                          }}>
+                    }}>
                     {
                         character.map((character, i) =>
                             <Product character={character} key={i} />)
@@ -75,7 +77,7 @@ const Home = (props) => {
             <Container>
                 <div className='title'>
                     <h2>Action Figures</h2>
-                    <p>Are you one with the Force, young Padawan? With our epic range of Star Wars action figures, your local star system will be bursting with legendary favorites. Whether you’re a Rebel at heart or you have a soft spot for the dark side, we've got the droids, Wookiees, and Jedi Masters to boost your shelf’s interstellar style. To explore the galaxy far, far away in greater depth, check out our Star Wars collectibles. Then, if you think your collection can handle more, your next adventure lies within our entire action figures collection. May the Force (of collecting) be with you!</p>
+                    <p>Are you one with the Force, young Padawan? With our epic range of Star Wars action figures, your local star system will be bursting with legendary favorites. Whether you're a Rebel at heart or you have a soft spot for the dark side, we've got the droids, Wookiees, and Jedi Masters to boost your shelf's interstellar style. To explore the galaxy far, far away in greater depth, check out our Star Wars collectibles. Then, if you think your collection can handle more, your next adventure lies within our entire action figures collection. May the Force (of collecting) be with you!</p>
                 </div>
             </Container>
             <div className='section3'>
@@ -141,50 +143,52 @@ const Home = (props) => {
                 </Container>
             </div>
 
-            <Container>
 
-                {/* Section4 */}
 
-                <div className="section4">
+            {/* Section4 */}
+            <div className='section4_wallpaper'>
+                <Container>
+                    <div className="section4">
 
-                    <div className='title'>
-                        <h2>Review</h2>
-                        <p>Show off your force.</p>
-                    </div>
+                        <div className='title'>
+                            <h2>Review</h2>
+                            <p>Show off your force.</p>
+                        </div>
 
-                    <Swiper
-                        slidesPerView={2}
-                        // centeredSlides={true}
-                        spaceBetween={30}
-                        grabCursor={true}
-                        pagination={{
-                            clickable: true,
-                        }}
-                        modules={Pagination}
-                        className="reviewmySwiper"
-                        breakpoints={{
-                            1: {
-                                slidesPerView: 1,
-                                spaceBetween: 20,
-                              },
-                
-                            768: {
-                              slidesPerView: 2,
-                              spaceBetween: 20,
+                        <Swiper
+                            slidesPerView={2}
+                            // centeredSlides={true}
+                            spaceBetween={30}
+                            grabCursor={true}
+                            pagination={{
+                                clickable: true,
+                            }}
+                            modules={Pagination}
+                            className="reviewmySwiper"
+                            breakpoints={{
+                                1: {
+                                    slidesPerView: 1,
+                                    spaceBetween: 20,
+                                },
+
+                                768: {
+                                    slidesPerView: 2,
+                                    spaceBetween: 20,
+                                }
+                            }}
+                        >
+                            {
+                                review.map((review, i) =>
+                                    <SwiperSlide key={i}>
+                                        <Userreview review={review} />
+                                    </SwiperSlide>
+                                )
                             }
-                          }}
-                    >
-                        {
-                            review.map((review, i) =>
-                                <SwiperSlide key={i}>
-                                    <Userreview review={review} />
-                                </SwiperSlide>
-                            )
-                        }
 
-                    </Swiper>
-                </div>
-            </Container>
+                        </Swiper>
+                    </div>
+                </Container>
+            </div>
 
             {/* Section5 */}
             <Container>
@@ -220,16 +224,16 @@ const Home = (props) => {
                         breakpoints={{
                             1: {
                                 slidesPerView: 1,
-                              },
-                
+                            },
+
                             768: {
-                              slidesPerView: 2,
+                                slidesPerView: 2,
                             },
                             991: {
-                              slidesPerView: 3,
+                                slidesPerView: 3,
                             },
-                
-                          }}
+
+                        }}
                     >
                         {
                             comingsoon.map((comingsoon, i) =>
@@ -243,7 +247,7 @@ const Home = (props) => {
 
                 {/* section7 */}
 
-                <Image className="Section7"src="/img/section_7.jpg" width={'100%'} fluid />
+                <Image className="Section7" src="/img/section_7.jpg" width={'100%'} fluid />
 
 
 
@@ -266,18 +270,18 @@ const Home = (props) => {
                         1: {
                             slidesPerView: 1,
                             spaceBetween: 20,
-                          },
-            
+                        },
+
                         768: {
-                          slidesPerView: 2,
-                          spaceBetween: 20,
+                            slidesPerView: 2,
+                            spaceBetween: 20,
                         },
                         991: {
-                          slidesPerView: 3,
-                          spaceBetween: 40,
+                            slidesPerView: 3,
+                            spaceBetween: 40,
                         },
-            
-                      }}
+
+                    }}
                 >
                     {
                         userblog.map((userblog, i) =>
@@ -291,22 +295,22 @@ const Home = (props) => {
                 {/* section9 */}
                 <div className='section9'>
                     <Swiper watchSlidesProgress={true} slidesPerView={3} className="partnersmySwiper"
-        breakpoints={{
-            1: {
-                slidesPerView: 1,
-                spaceBetween: 20,
-              },
+                        breakpoints={{
+                            1: {
+                                slidesPerView: 1,
+                                spaceBetween: 20,
+                            },
 
-            768: {
-              slidesPerView: 2,
-              spaceBetween: 20,
-            },
-            991: {
-              slidesPerView: 3,
-              spaceBetween: 40,
-            },
+                            768: {
+                                slidesPerView: 2,
+                                spaceBetween: 20,
+                            },
+                            991: {
+                                slidesPerView: 3,
+                                spaceBetween: 40,
+                            },
 
-          }}>
+                        }}>
                         {
                             partners.map((partners, i) =>
                                 <SwiperSlide key={i} >

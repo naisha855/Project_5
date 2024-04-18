@@ -2,7 +2,6 @@ import React from 'react'
 
 const TabContent = (props) => {
   let { tab, selproduct } = props;
-  // let { imgProduct1 } = props.product;
   if (tab === 0) {
 
     return (
@@ -13,13 +12,26 @@ const TabContent = (props) => {
         <img src={selproduct.imgProduct4} alt="" />
         <img src={selproduct.imgProduct5} alt="" />
       </div>
-    )} else if (tab === 1) {
+    )
+  } else if (tab === 1) {
 
     return <div className='Preview_text'><p>{selproduct.preview}</p></div>
 
   } else if (tab === 2) {
 
-    return <div>Review</div>
+    return (
+      <>
+        <div className='Review_title'>
+          <h4>Review</h4>
+        </div>
+        <div className='Review_info'>
+          <div>(5.0)</div>
+          <a href="">0 ratings</a>
+          <a href="">Write a Review</a>
+        </div>
+      </>
+    )
+
 
   }
 }

@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import { Container, Row, Col, Button, Nav, Alert } from 'react-bootstrap'
-import { useParams, Navigate } from 'react-router-dom'
+import { useParams, Navigate, useNavigate } from 'react-router-dom'
 import TabContent from '../components/TabContent'
 import { useDispatch } from 'react-redux'
 import { addItem } from '../store'
 
 const Detail = (props) => {
+    const navigate = useNavigate();
     const { id } = useParams();
     const { product } = props;
     let [tab, setTab] = useState(0);
@@ -45,7 +46,7 @@ const Detail = (props) => {
                         <li><h3>Character</h3>
                         <p>{selproduct.character}</p></li>
                         <li><h3>Manufacturer</h3>
-                        <p>{selproduct. manufacturer}</p></li>
+                        <p>{selproduct.manufacturer}</p></li>
                         <li><h3>Type</h3>
                         <p>{selproduct.type}</p></li>
                         <li><h3>Genre</h3>
@@ -54,7 +55,12 @@ const Detail = (props) => {
                         <p>{selproduct.artists}</p></li>
                     </ul>
                     <p>{selproduct.price}</p>
-                    <Button color='white' classvariant='sucess' onClick= {()=>{dispatch(addItem({id: selproduct.id,imgUrl: selproduct.imgUrl, item: selproduct.title, amount: 1}))}}>Add to cart</Button>
+                    <Button color='white' classvariant='sucess' onClick= {()=>{
+                        dispatch(addItem({id: selproduct.id,imgUrl: selproduct.imgUrl, item: selproduct.title, price:selproduct.price, amount: 1}))
+                        navigate('/cart')
+                    }
+                    
+                }>Add to cart</Button>
                 </Col>
             </Row>
             <Nav variant="tabs" defaultActiveKey="link0">

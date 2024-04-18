@@ -49,12 +49,4 @@ Media size
 
 - section2 img 조정
 - section3 베스트 피규어 구성
-- section4 리뷰 전체 페이지
-- section8 호버 효과, 링크 등
-- 세로 2열 페이지 열 흐뜨러지는 현상
-- 모바일 사이즈 조정 필요
-
-- detail 추가 작업
-
-- Cart 리덕스를 사용해 버튼 수량 조정
-- 상품 이미지
+- login 페이지

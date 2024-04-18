@@ -24,6 +24,7 @@ import 'swiper/css'
 import 'swiper/css/grid'
 import 'swiper/css/pagination'
 import './styles.css'
+import Login from './components/Login.jsx';
 
 function App() {
   let [shippinginfo, setShippinginfo] = useState(info);
@@ -35,6 +36,8 @@ function App() {
   let [partners, setPartners] = useState(data6);
   let [no, setNo] = useState([0, 1, 2, 3, 4, 5, 6, 7, 8, 9]);
   let navigate = useNavigate();
+  var str = "23000000000"
+  var str2 = str.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
 
   return (
     <div className="App">
@@ -57,13 +60,13 @@ function App() {
                 <Offcanvas.Body>
                   <Nav className="justify-content-end flex-grow-1 pe-3">
                     <Nav.Link onClick={()=>{navigate('/')}}>Home</Nav.Link>
-                    <Nav.Link onClick={()=>{navigate('/Detail/0')}}>Shop</Nav.Link>
-                    <Nav.Link onClick={()=>{navigate('/Cart')}}>Cart</Nav.Link>
+                    <Nav.Link onClick={()=>{navigate('/detail/0')}}>Shop</Nav.Link>
+                    <Nav.Link onClick={()=>{navigate('/cart')}}>Cart</Nav.Link>
                     <NavDropdown
                       title="My"
                       id={`offcanvasNavbarDropdown-expand-${'md'}`}
                     >
-                      <NavDropdown.Item href="#action3">login</NavDropdown.Item>
+                      <NavDropdown.Item href="/Login">login</NavDropdown.Item>
                       <NavDropdown.Item href="#action4">
                         Create An Account
                       </NavDropdown.Item>
@@ -95,10 +98,9 @@ function App() {
 
           <Route path="/" element={<Home shippinginfo={shippinginfo} character={character} product={product} review={review} comingsoon={comingsoon} userblog={userblog}
             partners={partners} no={no} />} />
-
           <Route path="/detail/:id" element={<Detail product={product} />} />
-
           <Route path="/cart" element={<Cart />} />
+          <Route path="/login" element={<Login />} />
         </Routes>
 
 
@@ -166,6 +168,9 @@ function App() {
             </div>
           </div>
         </footer>
+
+
+
 
       </>
     </div>
