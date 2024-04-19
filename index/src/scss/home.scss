@@ -112,8 +112,10 @@ $MainGray: #B5B7B7;
     display: flex;
     flex-direction: row;
 
-    a {
+    h4 {
         color: $MainWhite;
+        font-family: "Russo One";
+        font-size: 14px;
     }
 
     .row {
@@ -130,7 +132,7 @@ $MainGray: #B5B7B7;
                 height: 300px;
             }
 
-            a {
+            h4 {
                 font-size: 20px;
                 margin: 10px 0;
             }
@@ -184,7 +186,7 @@ $MainGray: #B5B7B7;
     background-color: $MainGray;
     cursor: pointer;
 
-    a {
+    h4 {
         color: $StarWarsYellow;
     }
 
@@ -201,6 +203,7 @@ $MainGray: #B5B7B7;
 // section4
 
 .section4_wallpaper {
+background-size: cover;
     background-position: center;
     background-image: url(/../public/img/section4_wallpaper.jpg);
     padding: 60px 0 52px 0;
@@ -389,7 +392,7 @@ $MainGray: #B5B7B7;
     }
 }
 
-.section8:hover{
+.section8:hover {
     img {
         transition: 0.5s;
         display: block;
@@ -410,6 +413,18 @@ $MainGray: #B5B7B7;
 
     img {
         height: 100px;
+    }
+}
+
+// Footer
+
+Footer{
+    li, p{
+        color: $MainGray;
+    }
+
+    .colphon_links li{
+        color: $MainWhite;
     }
 }
 
@@ -458,13 +473,23 @@ $MainGray: #B5B7B7;
 
     p {
         font-size: 26px;
+        color: $MainGray;
     }
 
+
+    .Detail_price{
+        margin-right: 20px;
+        text-align: right;
+        color: $MainWhite;
+        font-weight: 900;
+    }
 }
 
 .Detail_tag {
     color: $MainWhite;
 }
+
+// Detail_productpage
 
 .DetailProduct_img {
     margin-bottom: 200px;
@@ -475,13 +500,51 @@ $MainGray: #B5B7B7;
     margin-top: 50px;
 }
 
+// Detail_Preview_Page
+
 .Preview_text {
     margin: 50px 0;
+    color: $MainGray;
 }
 
-// .Review_info{
+// Detail_Review_page
 
-// }
+.Review_title {
+    h4 {
+        font-size: 3rem;
+    }
+
+    margin-top: 4rem;
+}
+
+.Review_info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0;
+    font-size: 1.1rem;
+    padding: 3rem 2.5rem 0;
+
+
+
+    .review_list {
+        margin: 0 0 0 .8rem;
+        font-size: 1.1rem;
+        color: $MainGray;
+    }
+
+    .review_list::before {
+        content: "|";
+    }
+
+    .write_a_review {
+        padding: .9rem 3.5rem;
+        border: .1rem solid transparent;
+        color: $SubBlack;
+        margin: 0 0 0 4.5rem;
+        background: $MainWhite;
+    }
+}
 
 .nav-tabs {
     margin-top: 100px;
@@ -489,15 +552,100 @@ $MainGray: #B5B7B7;
 
 // Cart
 
+.Cart_Main{
+td{
+    vertical-align: middle;
+    font-size: 20px;
+    color: $MainGray;
+
+    button{
+        width: 50px;
+        height: 50px;
+        border: none;
+        color: $MainWhite;
+        background-color: $MainBlack;
+    }
+}
+
+.Cart_point{
+    color: $MainBlack;
+}
+    p{
+        font-size: 30px;
+    }
+
+}
+
+.Cart_log{
+    padding: 0 50px ;
+    display: flex;
+    justify-content: space-between;
+}
 .Sort_button {
     background-color: transparent;
     border: none;
     color: $MainWhite;
+
 }
 
 .Sort_button:hover {
     transition: 0.5s;
     color: $StarWarsYellow;
+}
+
+// Login
+
+.Login {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    background-color: $MainGray;
+    width: 400px;
+    margin-top: 50px;
+
+    h3 {
+        font-weight: 800;
+        margin-bottom: 10px;
+    }
+
+    h4 {
+        color: $SubBlack;
+        font-size: 3rem;
+
+    }
+
+    .Login_populate {
+        color: $SubBlack;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .Login_id,
+    .Login_password {
+        padding: 1rem 0;
+        width: 100%;
+    }
+
+    input {
+        color: $SubBlack;
+        font-size: 18px;
+        background-color: transparent;
+        border: none;
+        border-bottom: 2px solid $SubBlack;
+        width: 100%;
+    }
+
+    button {
+        font-weight: 900;
+        font-size: 20px;
+        border: none;
+        margin: 1rem 0;
+        padding: .9rem 3.5rem;
+        background-color: $StarWarsYellow;
+        color: $SubBlack;
+    }
 }
 
 @media screen and (max-width: 991px) {
@@ -513,9 +661,25 @@ $MainGray: #B5B7B7;
         }
     }
 
+    .character {
+        width: 50%;
+    }
+.section3 {
+    h5{
+        display: none;
+    }
+    p{
+        font-size: 14px;
+    }
+}
 }
 
 @media screen and (max-width: 768px) {
+
+    .character {
+        width: 100%;
+    }
+
     .navbar-brand img {
         display: none;
     }
@@ -525,15 +689,15 @@ $MainGray: #B5B7B7;
 
         .row {
             height: 100% !important;
-
             .left {
                 height: 50%;
 
             }
-
             .right {
                 height: 50% !important;
-
+                h5{
+                    display: block;
+                }
             }
         }
     }

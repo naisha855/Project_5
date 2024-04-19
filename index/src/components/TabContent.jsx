@@ -26,8 +26,8 @@ const TabContent = (props) => {
         </div>
         <div className='Review_info'>
           <div>(5.0)</div>
-          <a href="">0 ratings</a>
-          <a href="">Write a Review</a>
+          <a href="" className='review_list'> 0 ratings</a>
+          <a href="" className='write_a_review'>Write a Review</a>
         </div>
       </>
     )

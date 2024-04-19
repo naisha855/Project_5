@@ -41,12 +41,3 @@ https://minkyung05.github.io/project4_react_jordan/
 https://subin114.github.io/
 
 https://lej99.github.io/project_5/
-
-Media size
-
-
-수정 사항
-
-- section2 img 조정
-- section3 베스트 피규어 구성
-- login 페이지

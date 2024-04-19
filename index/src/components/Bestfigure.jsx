@@ -8,7 +8,6 @@ const Bestfigure = (props) => {
     let navigate = useNavigate();
     let { imgUrl, title, size, price } = props.product;
     let { i , no } = props;
-
     return (
         <div    className='Section3_page' style={{ display: 'flex', flexDirection: 'column' }}>
             <Nav.Link onClick={()=>navigate('/detail/' + no[i])}>
@@ -17,9 +16,9 @@ const Bestfigure = (props) => {
                 />
             </div>
             <div className='best_figure'>
-                <a href="">{title}</a>
+                <h4 href="">{title}</h4>
                 <h5>{size}</h5>
-                <p>{price}</p>
+                <p> {price} USD</p>
             </div>
             </Nav.Link>
         </div>

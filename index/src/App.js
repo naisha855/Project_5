@@ -27,25 +27,23 @@ import './styles.css'
 import Login from './components/Login.jsx';
 
 function App() {
-  let [shippinginfo, setShippinginfo] = useState(info);
-  let [character, setChracter] = useState(data);
-  let [product, setProduct] = useState(data2);
-  let [review, setReview] = useState(data3);
-  let [comingsoon, setComingsoon] = useState(data4);
-  let [userblog, Setuserblog] = useState(data5);
-  let [partners, setPartners] = useState(data6);
-  let [no, setNo] = useState([0, 1, 2, 3, 4, 5, 6, 7, 8, 9]);
+  let [shippinginfo] = useState(info);
+  let [character] = useState(data);
+  let [product] = useState(data2);
+  let [review] = useState(data3);
+  let [comingsoon] = useState(data4);
+  let [userblog] = useState(data5);
+  let [partners] = useState(data6);
+  let [no] = useState([0, 1, 2, 3, 4, 5, 6, 7, 8, 9]);
   let navigate = useNavigate();
-  var str = "23000000000"
-  var str2 = str.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
 
   return (
-    <div className="App">
+    <div className="App" >
       <>
-        {['md'].map((expand) => (
-          <Navbar>
+        {['md'].map((expand, i) => (
+          <Navbar key={i}>
             <Container fluid>
-              <Navbar.Brand onClick={()=>{navigate('/')}}><Image src="/img/logo.png" height={'50px'} /></Navbar.Brand>
+              <Navbar.Brand onClick={() => { navigate('/') }}><Image src="/img/logo.png" height={'50px'} /></Navbar.Brand>
               <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${'md'}`} />
               <Navbar.Offcanvas
                 id={`offcanvasNavbar-expand-${expand}`}
@@ -59,20 +57,20 @@ function App() {
                 </Offcanvas.Header>
                 <Offcanvas.Body>
                   <Nav className="justify-content-end flex-grow-1 pe-3">
-                    <Nav.Link onClick={()=>{navigate('/')}}>Home</Nav.Link>
-                    <Nav.Link onClick={()=>{navigate('/detail/0')}}>Shop</Nav.Link>
-                    <Nav.Link onClick={()=>{navigate('/cart')}}>Cart</Nav.Link>
+                    <Nav.Link onClick={() => { navigate('/') }}>Home</Nav.Link>
+                    <Nav.Link onClick={() => { navigate('/detail/0') }}>Shop</Nav.Link>
+                    <Nav.Link onClick={() => { navigate('/cart') }}>Cart</Nav.Link>
                     <NavDropdown
-                      title="My"
+                      title="My page"
                       id={`offcanvasNavbarDropdown-expand-${'md'}`}
                     >
                       <NavDropdown.Item href="/Login">login</NavDropdown.Item>
                       <NavDropdown.Item href="#action4">
-                        Create An Account
+                        Find ID & Password
                       </NavDropdown.Item>
                       <NavDropdown.Divider />
                       <NavDropdown.Item href="#action5">
-                      Find ID & Password
+                        Create An Account
                       </NavDropdown.Item>
                     </NavDropdown>
                   </Nav>
@@ -140,20 +138,20 @@ function App() {
             <div className='Footer_connect'>
               <h6>connect with us</h6>
               <div className='footer_span'>
-                <span><img src='/img/Facebook_icon.png'/></span>
-                <span><img src='/img/Twitter_icon.jpg'/></span>
-                <span><img src='/img/Youtube_icon.png'/></span>
-                <span><img src='/img/Sideshow_icon.png'/></span>
-                <span><img src='/img/Instergream_icon.png'/></span>
-                <span><img src='/img/Phinterest_icon.png'/></span>
-                <span><img src='/img/Tiktok_icon.png'/></span>
+                <span><img src='/img/Facebook_icon.png' /></span>
+                <span><img src='/img/Twitter_icon.jpg' /></span>
+                <span><img src='/img/Youtube_icon.png' /></span>
+                <span><img src='/img/Sideshow_icon.png' /></span>
+                <span><img src='/img/Instergream_icon.png' /></span>
+                <span><img src='/img/Phinterest_icon.png' /></span>
+                <span><img src='/img/Tiktok_icon.png' /></span>
               </div>
               <p>Want $20 Off? Sign up for our Newsletter.<br />
                 Sign up for SMS alerts and be the first to know!</p>
               <button>Get in the loop</button>
             </div>
           </div>
-          <br/><br/><br/><br/><br/>
+          <br /><br /><br /><br /><br />
           <div className='footer_colphon'>
             <ul className='colphon_links'>
               <img src='/img/accredited_business.png' />
@@ -163,15 +161,11 @@ function App() {
               <span>|</span>
               <li>Accessibility Statement</li>
             </ul>
-            <div className='className=' colphon_colyright>
+            <div className='colphon_colyright'>
               <p>Series content, product specifications, release dates and pricing are subject to change. Sideshow Collectibles is the registered <br />trademark and copyright of Sideshow Inc. All Rights Reserved.</p>
             </div>
           </div>
         </footer>
-
-
-
-
       </>
     </div>
   );

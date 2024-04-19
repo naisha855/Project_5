@@ -54,7 +54,7 @@ const Detail = (props) => {
                         <li><h3>Artists</h3>
                         <p>{selproduct.artists}</p></li>
                     </ul>
-                    <p>{selproduct.price}</p>
+                    <p className='Detail_price'>{selproduct.price} USD</p>
                     <Button color='white' classvariant='sucess' onClick= {()=>{
                         dispatch(addItem({id: selproduct.id,imgUrl: selproduct.imgUrl, item: selproduct.title, price:selproduct.price, amount: 1}))
                         navigate('/cart')

@@ -81,7 +81,7 @@ const Home = (props) => {
                 </div>
             </Container>
             <div className='section3'>
-                <Container>
+                <Container key="0">
                     <Row style={{ height: 500 }}>
                         <Col className='left' md={5} xl={4}>
                             <Swiper
@@ -102,15 +102,18 @@ const Home = (props) => {
 
                                 {
                                     product.map((product, i) =>
-                                        <SwiperSlide>
-                                            <Bestfigure product={product} key={i} />
+                                        <SwiperSlide key={i}>
+                                            <Bestfigure product={product}  />
                                         </SwiperSlide>)
                                 }
 
 
                             </Swiper>
                         </Col>
-                        <Col className='right' md={7} xl={8} style={{ height: '100%' }}>
+
+
+                        <Col  className='right' md={7} xl={8} style={{ height: '100%' }} >
+
                             <Swiper
                                 slidesPerView={2}
                                 grid={{
@@ -133,8 +136,8 @@ const Home = (props) => {
                             >
                                 {
                                     product.map((product, i) =>
-                                        <SwiperSlide className='Bestfigure_list'>
-                                            <Bestfigure product={product} key={i} i={i} no={no} />
+                                        <SwiperSlide key={i}className='Bestfigure_list'>
+                                            <Bestfigure product={product}  i={i} no={no} />
                                         </SwiperSlide>)}
                             </Swiper>
                         </Col>
