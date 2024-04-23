@@ -43,7 +43,7 @@ function App() {
         {['md'].map((expand, i) => (
           <Navbar key={i}>
             <Container fluid>
-              <Navbar.Brand onClick={() => { navigate('/') }}><Image src="/img/logo.png" height={'50px'} /></Navbar.Brand>
+              <Navbar.Brand onClick={() => { navigate('/') }}><Image src={ process.env.PUBLIC_URL +"/img/logo.png" } height={'50px'} /></Navbar.Brand>
               <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${'md'}`} />
               <Navbar.Offcanvas
                 id={`offcanvasNavbar-expand-${expand}`}
