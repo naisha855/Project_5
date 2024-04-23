@@ -25,37 +25,37 @@ let data4 = [
     },
     {
         id: 4,
-        imgUrl: "/img/Comingsoon5.png",
+        imgUrl: {precess.env.PUBLIC_URL + "/img/Comingsoon5.png" },
         scale: "Sixth Scale Figure",
         title: "R5-D4™ SIXTH SCALE FIGURE BY HOT TOYS"
     },
     {
         id: 5,
-        imgUrl: "/img/Comingsoon6.png",
+        imgUrl: {precess.env.PUBLIC_URL + "/img/Comingsoon6.png" },
         scale: "Sixth Scale Figure Accessory",
         title: "PREVIEW N-1 STARFIGHTER SIXTH SCALE FIGURE ACCESSORY - HOT TOYS"
     },
     {
         id: 6,
-        imgUrl: "/img/Comingsoon7.png",
+        imgUrl: {precess.env.PUBLIC_URL + "/img/Comingsoon7.png" },
         scale: "Sixth Scale Figure",
         title: "GROGU SIXTH SCALE FIGURE SET"
     },
     {
         id: 7,
-        imgUrl: "/img/Comingsoon8.png",
+        imgUrl: {precess.env.PUBLIC_URL + "/img/Comingsoon8.png" },
         scale: "Sixth Scale Figure Set",
         title: "PREVIEW PIT DROID™ AND BD-72™ SIXTH SCALE FIGURE SET"
     },
     {
         id: 8,
-        imgUrl: "/img/Comingsoon9.png",
+        imgUrl: {precess.env.PUBLIC_URL + "/img/Comingsoon9.png" },
         scale: "Sixth Scale Figure",
         title: "FOURTH SISTER SIXTH SCALE FIGURE"
     },
     {
         id: 9,
-        imgUrl: "/img/Comingsoon10.png",
+        imgUrl: {precess.env.PUBLIC_URL + "/img/Comingsoon10.png" },
         scale: "Sixth Scale Figure Set",
         title: "PREVIEW THE MANDALORIAN AND GROGU SIXTH SCALE FIGURE SET - HOT TOYS"
     },

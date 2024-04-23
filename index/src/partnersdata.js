@@ -1,31 +1,31 @@
 let data6 = [
     {
         id: 0,
-        logo: "/img/dc_comics.png"
+        logo: {precess.env.PUBLIC_URL + "/img/dc_comics.png" }
     },
     {
         id: 1,
-        logo: "/img/disney.png"
+        logo: {precess.env.PUBLIC_URL + "/img/disney.png" }
     },
     {
         id: 2,
-        logo: "/img/harry_potter.png"
+        logo: {precess.env.PUBLIC_URL + "/img/harry_potter.png" }
     },
     {
         id: 3,
-        logo: "/img/jurassic_park.png"
+        logo: {precess.env.PUBLIC_URL + "/img/jurassic_park.png" }
     },
     {
         id: 4,
-        logo: "/img/marvel_comics.png"
+        logo: {precess.env.PUBLIC_URL + "/img/marvel_comics.png" }
     },
     {
         id: 5,
-        logo: "/img/star_wars.png"
+        logo: {precess.env.PUBLIC_URL + "/img/star_wars.png" }
     },
     {
         id: 6,
-        logo: "/img/hot_toys.png"
+        logo: {precess.env.PUBLIC_URL + "/img/hot_toys.png" }
     },
 ]
 
