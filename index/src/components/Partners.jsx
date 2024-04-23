@@ -7,7 +7,7 @@ const Partners = (props) => {
     let { logo } = props.partners;
     return (
         <Col>
-            <img src={logo} alt="" />
+            <img src={process.env.PUBLIC_URL + logo} alt="" />
         </Col>
     )
 }

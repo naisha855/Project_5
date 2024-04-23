@@ -7,7 +7,7 @@ const Userreview = (props) => {
     let { imgUrl, text, userID, Email } = props.review;
     return (
         <Col className='userreview'>
-            <img src={imgUrl} alt="" className='profileimage' />
+            <img src={process.env.PUBLIC_URL + imgUrl} alt="" className='profileimage' />
             <div className='textpage'>
                 <p>{text}</p>
                 <div className='reviewlog'>

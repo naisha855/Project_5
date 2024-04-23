@@ -12,7 +12,7 @@ const Bestfigure = (props) => {
         <div    className='Section3_page' style={{ display: 'flex', flexDirection: 'column' }}>
             <Nav.Link onClick={()=>navigate('/detail/' + no[i])}>
             <div>
-                <img src={imgUrl} alt="item" className='section3_img'
+                <img src={process.env.PUBLIC_URL + imgUrl} alt="item" className='section3_img'
                 />
             </div>
             <div className='best_figure'>

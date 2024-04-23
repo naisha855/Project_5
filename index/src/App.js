@@ -138,13 +138,13 @@ function App() {
             <div className='Footer_connect'>
               <h6>connect with us</h6>
               <div className='footer_span'>
-                <span><img src='/img/Facebook_icon.png' /></span>
-                <span><img src='/img/Twitter_icon.jpg' /></span>
-                <span><img src='/img/Youtube_icon.png' /></span>
-                <span><img src='/img/Sideshow_icon.png' /></span>
-                <span><img src='/img/Instergream_icon.png' /></span>
-                <span><img src='/img/Phinterest_icon.png' /></span>
-                <span><img src='/img/Tiktok_icon.png' /></span>
+                <span><img src='../img/Facebook_icon.png' /></span>
+                <span><img src='../img/Twitter_icon.jpg' /></span>
+                <span><img src='../img/Youtube_icon.png' /></span>
+                <span><img src='../img/Sideshow_icon.png' /></span>
+                <span><img src='../img/Instergream_icon.png' /></span>
+                <span><img src='../img/Phinterest_icon.png' /></span>
+                <span><img src='../img/Tiktok_icon.png' /></span>
               </div>
               <p>Want $20 Off? Sign up for our Newsletter.<br />
                 Sign up for SMS alerts and be the first to know!</p>

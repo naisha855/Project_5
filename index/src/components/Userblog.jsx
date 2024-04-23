@@ -12,7 +12,7 @@ const Userblog = (props) => {
             <h3>{title}</h3>
             <p>{text}</p>
             </div>
-            <img src={imgUrl} alt="" />
+            <img src={process.env.PUBLIC_URL + imgUrl} alt="" />
         </Col>
     )
 }

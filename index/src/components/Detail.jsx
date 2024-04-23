@@ -35,7 +35,7 @@ const Detail = (props) => {
             }
             <Row className='Detail_productpage'>
                 <Col md={6} className='Detail_imglayer'>
-                    <img src={product[id].imgUrl} className='Detail_img'/>
+                    <img src={process.env.PUBLIC_URL + product[id].imgUrl} className='Detail_img'/>
                 </Col>
                 <Col md={6} className='Detail_page'>
                     <h4 className='pt-5'>{selproduct.title}</h4>

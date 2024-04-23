@@ -53,7 +53,7 @@ const Cart = () => {
                      cart.map((v, i) =>
                         <tr key={i}>
                            <td>{v.id}</td>
-                           <td><img src={v.imgUrl} alt="" height='100px' /></td>
+                           <td><img src={process.env.PUBLIC_URL + v.imgUrl} alt="" height='100px' /></td>
                            <td className="Cart_point">{v.item}</td>
                            <td className="Cart_point">{v.amount}</td>
                            <td><button onClick={() =>

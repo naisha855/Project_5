@@ -42,9 +42,9 @@ const Home = (props) => {
             <Container>
                 {/* section1 */}
                 <Row className='section1'>
-                    <Col lg={3}><img src="/img/section1_1.jpg" /></Col>
-                    <Col lg={6}><img src="/img/section1_2.jpg" /></Col>
-                    <Col lg={3}><img src="/img/section1_3.jpg" /></Col>
+                    <Col lg={3}><img src={process.env.PUBLIC_URL + "/img/section1_1.jpg"} /></Col>
+                    <Col lg={6}><img src={process.env.PUBLIC_URL + "/img/section1_2.jpg"} /></Col>
+                    <Col lg={3}><img src={process.env.PUBLIC_URL + "/img/section1_3.jpg"} /></Col>
                 </Row>
 
                 {/* section2 */}
@@ -250,7 +250,7 @@ const Home = (props) => {
 
                 {/* section7 */}
 
-                <Image className="Section7" src="/img/section_7.jpg" width={'100%'} fluid />
+                <Image className="Section7" src={process.env.PUBLIC_URL + "/img/section_7.jpg"} width={'100%'} fluid />
 
 
 

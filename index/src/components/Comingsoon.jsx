@@ -6,7 +6,7 @@ const Comingsoon = (props) => {
     let { imgUrl, scale, title } = props.comingsoon;
     return (
         <div className='comingsoon'>
-            <img src={imgUrl} alt="" />
+            <img src={process.env.PUBLIC_URL + imgUrl} alt="" />
             <div>
             <h5>{scale}</h5>
             <a href="">{title}</a>
