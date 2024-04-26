@@ -11,12 +11,12 @@ import ScrollToTop from './ScrollToTop';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-<Provider store={store}>
+    <Provider store={store}>
       <BrowserRouter basename='/starwars'>
-      <ScrollToTop />
-    <App />
-    </BrowserRouter>
-</Provider>
+        <ScrollToTop />
+        <App />
+      </BrowserRouter>
+    </Provider>
   </React.StrictMode>
 );
 
